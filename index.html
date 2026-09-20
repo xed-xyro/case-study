@@ -17,7 +17,6 @@
 				</form>
 			</nav>
 		</div>
-
         <h1>🍜 Joey's Restaurant Café</h1>
         <div class="container">
             <div class="summary" id="summary"></div>
@@ -30,19 +29,28 @@
             <div class="add-review-form" id="addForm">
                 <h3>Share your experience</h3>
                 <div class="form-row">
-                    <input type="text" id="nameInput" placeholder="Your name" required>
-                    <input type="text" id="dishInput" placeholder="Dish you tried (optional)">
+                    <div class="field">
+                        <label for="nameInput">Your name</label>
+                        <input type="text" id="nameInput" placeholder="Enter your name" required>
+                    </div>
+                    <div class="field">
+                        <label for="dishInput">Dish you tried (optional)</label>
+                        <input type="text" id="dishInput" placeholder="Example: Pancit Palabok">
+                    </div>
                 </div>
-                <div class="form-row" style="align-items:center;">
-            		<span style="font-size:0.85rem;color:var(--text-dim);">Rating:</span>
+                <div class="form-row">
+                    <span class="rating-label">Rating:</span>
                     <div class="star-picker" id="starPicker">
                         <span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span>
                     </div>
                 </div>
-                <textarea id="textInput" placeholder="What did you think of the food, service, and atmosphere?" required></textarea>
+                <div class="field">
+                    <label for="textInput">Your review</label>
+                    <textarea id="textInput" placeholder="What did you think of the food, service, and atmosphere?" required></textarea>
+                </div>
                 <button type="submit" class="submit-btn" id="submitReviewBtn">Post review</button>
             </div>
-		</form>
+        </form>
             <p id="thankYouMsg" style="color: green; font-weight: bold; font-size: 1.1rem;"></p>
             <div class="review-list" id="reviewList"></div>
             <div class="empty-state" id="emptyState" style="display:none;">No reviews match this filter yet.</div>
