@@ -17,5 +17,37 @@
 				</form>
 			</nav>
 		</div>
+
+        <h1>🍜 Joey's Restaurant Café</h1>
+        <div class="container">
+            <div class="summary" id="summary"></div>
+            <div class="controls">
+                <div class="filters" id="filters"></div>
+                <button class="add-review-toggle" id="toggleFormBtn">+ Write a review</button>
+            </div>
+
+        <form id="reviewForm">
+            <div class="add-review-form" id="addForm">
+                <h3>Share your experience</h3>
+                <div class="form-row">
+                    <input type="text" id="nameInput" placeholder="Your name" required>
+                    <input type="text" id="dishInput" placeholder="Dish you tried (optional)">
+                </div>
+                <div class="form-row" style="align-items:center;">
+            		<span style="font-size:0.85rem;color:var(--text-dim);">Rating:</span>
+                    <div class="star-picker" id="starPicker">
+                        <span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span>
+                    </div>
+                </div>
+                <textarea id="textInput" placeholder="What did you think of the food, service, and atmosphere?" required></textarea>
+                <button type="submit" class="submit-btn" id="submitReviewBtn">Post review</button>
+            </div>
+		</form>
+            <p id="thankYouMsg" style="color: green; font-weight: bold; font-size: 1.1rem;"></p>
+            <div class="review-list" id="reviewList"></div>
+            <div class="empty-state" id="emptyState" style="display:none;">No reviews match this filter yet.</div>
+        </div>
+        <footer>Joey's Restaurant Café &middot; 39 General Luna Street, Cabanatuan City, 3100 Nueva Ecija</footer>
+        <script src="script.js"></script>
 	</body>
 </html>
