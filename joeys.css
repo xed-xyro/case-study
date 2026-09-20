@@ -1,0 +1,72 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial,sans-serif;
+	}
+			
+header{
+	width: 55%;
+	margin: 20px auto;
+	}
+
+body{
+	background: url(images/joeysbg.png) no-repeat fixed;
+	background-size: cover;
+	}
+				
+.nav-box{
+	width: 60%;
+	margin: 30px auto;
+	background: white;
+	padding: 20px;
+	border-radius: 20px;
+	text-align: center;
+}
+
+nav{
+	display: flex;
+	justify-content: center;
+	gap: 50px;
+}
+
+nav a{
+	text-decoration: none;
+	color: #5A3E2B;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+nav a:hover{
+	color: #d18b3f;
+}
+				
+.nav-box nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #d32f2f; /* red background */
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 5px 15px;
+  width: 220px;
+}
+
+.search-bar input[type="search"] {
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  flex: 1;
+}
+
+.search-bar input::placeholder {
+  color: white;
+  font-weight: bold;
+}
