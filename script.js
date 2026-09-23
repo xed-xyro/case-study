@@ -59,7 +59,6 @@ reviewForm.addEventListener("submit", function(event) {
   
   addForm.style.display = "none";
   toggleFormBtn.innerText = "+ Write a review";
-});  }
 });
 
 reviewForm.addEventListener("submit", function(event) {
