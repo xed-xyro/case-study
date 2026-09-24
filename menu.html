@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="joeys.css">
 	</head>
 	<body>		<!-- All following styles are inline for now -->
-			<!-- Change count: 2 ~~ Sign in: 4 -->
+			<!-- Sign in counter: 5 -->
 		<!-- This is the navigation bar with a search bar on top of page -->
 	<div class="nav-box" style="margin-bottom: 30px;"> 
 		<nav>
@@ -15,451 +15,422 @@
 			<a href="about.html">About</a>
 			<a href="contact.html">Contact</a>
 			<form action="#" method="POST" class="search-bar">
-						<input type="search" placeholder="Search                   🔍">
-					</form>
+				<input type="search" placeholder="Search                   🔍">
+			</form>
 			<a href="https://www.foodpanda.ph/restaurant/b6ho/joeys-restaurant-cafe-general-luna-street" target="_blank" rel="noopener noreferrer" class="order-btn">Order Now!</a>
 		</nav>
 	</div>
-
-		<!-- This is the menu navigation bar on the left -->
-	<div style="width: 80%; margin: 0 auto; display: flex; gap: 25px; align-items: flex-start;"> 
-
-		 	<!-- This is the transparent part of the border -->
-		<div style="width: 22%; background: #ffffffd2; border-radius: 16px; padding: 14px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
-
-				<!-- Controls of the menu nav bar -->
-			<div style="background: #fff; padding: 14px 12px; border-radius: 14px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.50);">
-				<h1 style="text-align: center; color: #5A3E2B; margin: 0 0 12px; font-size: 1.7rem;">Menu</h1>
-				<a href="#popular" style="display: block; text-decoration: none; color: white; background: #d32f2f; padding: 8px 10px; margin-bottom: 8px; border-radius: 8px; font-weight: bold; font-size: 0.82rem; line-height: 1.2;">Popular</a>
-				<a href="#noodles-and-soup" style="display: block; text-decoration: none; color: white; background: #d32f2f; padding: 8px 10px; margin-bottom: 8px; border-radius: 8px; font-weight: bold; font-size: 0.82rem; line-height: 1.2;">Noodles And Soup</a>
-				<a href="#short-order" style="display: block; text-decoration: none; color: white; background: #d32f2f; padding: 8px 10px; margin-bottom: 8px; border-radius: 8px; font-weight: bold; font-size: 0.82rem; line-height: 1.2;">Short Order</a>
-				<a href="#sandwiches" style="display: block; text-decoration: none; color: white; background: #d32f2f; padding: 8px 10px; margin-bottom: 8px; border-radius: 8px; font-weight: bold; font-size: 0.82rem; line-height: 1.2;">Sandwiches</a>
-				<a href="#specialty-of-the-house" style="display: block; text-decoration: none; color: white; background: #d32f2f; padding: 8px 10px; margin-bottom: 8px; border-radius: 8px; font-weight: bold; font-size: 0.82rem; line-height: 1.2;">Specialty Of the House</a>
-				<a href="#lunch-others" style="display: block; text-decoration: none; color: white; background: #d32f2f; padding: 8px 10px; margin-bottom: 8px; border-radius: 8px; font-weight: bold; font-size: 0.82rem; line-height: 1.2;">Lunch &amp; Others</a>
-				<a href="#spaghetti-pancit-sa-bilao" style="display: block; text-decoration: none; color: white; background: #d32f2f; padding: 8px 10px; margin-bottom: 8px; border-radius: 8px; font-weight: bold; font-size: 0.82rem; line-height: 1.2;">Spaghetti &amp; Pancit Sa Bilao</a>
-				<a href="#desserts-and-sweets" style="display: block; text-decoration: none; color: white; background: #d32f2f; padding: 8px 10px; margin-bottom: 8px; border-radius: 8px; font-weight: bold; font-size: 0.82rem; line-height: 1.2;">Desserts And Sweets</a>
-				<a href="#cakes-bread" style="display: block; text-decoration: none; color: white; background: #d32f2f; padding: 8px 10px; margin-bottom: 8px; border-radius: 8px; font-weight: bold; font-size: 0.82rem; line-height: 1.2;">Cakes &amp; Bread</a>
-				<a href="#coolers" style="display: block; text-decoration: none; color: white; background: #d32f2f; padding: 8px 10px; margin-bottom: 8px; border-radius: 8px; font-weight: bold; font-size: 0.82rem; line-height: 1.2;">Coolers</a>
-				<a href="#softdrinks" style="display: block; text-decoration: none; color: white; background: #d32f2f; padding: 8px 10px; border-radius: 8px; font-weight: bold; font-size: 0.82rem; line-height: 1.2;">Softdrinks</a>
+			<!-- This is the biggest div containing a left and right column -->
+		<div style="width: 80%; margin: 0 auto; display: flex; gap: 25px; align-items: flex-start;"> 
+				<!-- This is the transparent part of the border -->
+			<div style="width: 22%; background: #ffffffd2; border-radius: 16px; padding: 14px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
+					<!-- Controls of the menu nav bar -->
+				<div style="background: #fff; padding: 14px 12px; border-radius: 14px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.50);">
+					<h1 style="text-align: center; color: #5A3E2B; margin: 0 0 12px; font-size: 1.7rem;">Menu</h1>
+					<a href="#popular" style="display: block; text-decoration: none; color: white; background: #d32f2f; padding: 8px 10px; margin-bottom: 8px; border-radius: 8px; font-weight: bold; font-size: 0.82rem; line-height: 1.2;">Popular</a>
+					<a href="#noodles-and-soup" style="display: block; text-decoration: none; color: white; background: #d32f2f; padding: 8px 10px; margin-bottom: 8px; border-radius: 8px; font-weight: bold; font-size: 0.82rem; line-height: 1.2;">Noodles And Soup</a>
+					<a href="#short-order" style="display: block; text-decoration: none; color: white; background: #d32f2f; padding: 8px 10px; margin-bottom: 8px; border-radius: 8px; font-weight: bold; font-size: 0.82rem; line-height: 1.2;">Short Order</a>
+					<a href="#sandwiches" style="display: block; text-decoration: none; color: white; background: #d32f2f; padding: 8px 10px; margin-bottom: 8px; border-radius: 8px; font-weight: bold; font-size: 0.82rem; line-height: 1.2;">Sandwiches</a>
+					<a href="#specialty-of-the-house" style="display: block; text-decoration: none; color: white; background: #d32f2f; padding: 8px 10px; margin-bottom: 8px; border-radius: 8px; font-weight: bold; font-size: 0.82rem; line-height: 1.2;">Specialty Of the House</a>
+					<a href="#lunch-others" style="display: block; text-decoration: none; color: white; background: #d32f2f; padding: 8px 10px; margin-bottom: 8px; border-radius: 8px; font-weight: bold; font-size: 0.82rem; line-height: 1.2;">Lunch &amp; Others</a>
+					<a href="#spaghetti-pancit-sa-bilao" style="display: block; text-decoration: none; color: white; background: #d32f2f; padding: 8px 10px; margin-bottom: 8px; border-radius: 8px; font-weight: bold; font-size: 0.82rem; line-height: 1.2;">Spaghetti &amp; Pancit Sa Bilao</a>
+					<a href="#desserts-and-sweets" style="display: block; text-decoration: none; color: white; background: #d32f2f; padding: 8px 10px; margin-bottom: 8px; border-radius: 8px; font-weight: bold; font-size: 0.82rem; line-height: 1.2;">Desserts And Sweets</a>
+					<a href="#cakes-bread" style="display: block; text-decoration: none; color: white; background: #d32f2f; padding: 8px 10px; margin-bottom: 8px; border-radius: 8px; font-weight: bold; font-size: 0.82rem; line-height: 1.2;">Cakes &amp; Bread</a>
+					<a href="#coolers" style="display: block; text-decoration: none; color: white; background: #d32f2f; padding: 8px 10px; margin-bottom: 8px; border-radius: 8px; font-weight: bold; font-size: 0.82rem; line-height: 1.2;">Coolers</a>
+					<a href="#softdrinks" style="display: block; text-decoration: none; color: white; background: #d32f2f; padding: 8px 10px; border-radius: 8px; font-weight: bold; font-size: 0.82rem; line-height: 1.2;">Softdrinks</a>
+				</div>
 			</div>
-		</div>
-
-			<!-- This is the border of the big menu on the right -->
-		<div style="width: 78%; max-height: 600px; overflow-y: auto; display: flex; flex-direction: column; gap: 25px; padding-right: 8px; border-radius: 20px;">
-			
-				<!-- This is the border for the whole menu -->
-			<div id="menu" style="background: #ffffffd2; padding: 25px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 20px; border-radius: 20px;">								
-				
-					<!-- This is the border for the popular category see id="popular" -->
-				<div id="popular" style="background: #fff; border-radius: 20px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.50); margin-bottom: 20px;">
-					<div style="border: 1px solid #d32f2f; border-radius: 12px; overflow: hidden; margin-bottom: 20px;">
-						<table style="width: 100%; border-collapse: collapse; font-size: 18px; color: #333;">
-							
-								<!-- Title category "Popular" -->
-							<thead>
-								<tr style="background: #d32f2f; color: #ffffff;">
-									<th colspan="3" style="padding: 12px; text-align: center;">Popular</th>
-								</tr>
-							</thead>
-							
-								<!-- Actual items -->
-							<tbody>
-
-									<!-- First row -->
-								<tr>
-
-										<!-- Item container top left -->
-									<td style="padding: 12px; border: 1px solid #d32f2f;">
-										
-											<!-- Food info conatainer -->
-										<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-
-												<!-- table inside div -->
-											<table>
-												<tr>
+				<!-- This is the border of the big menu on the right -->
+			<div style="width: 78%; max-height: 600px; overflow-y: auto; display: flex; flex-direction: column; gap: 25px; border-radius: 20px;">
+					<!-- This is the border for the whole menu -->
+				<div id="menu" style="background: #ffffffd2; padding: 25px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 20px; border-radius: 20px;">
+						<!-- This is the border for the popular category see id="popular" -->
+					<div id="popular" style="background: #ffffff; border-radius: 20px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.50); margin-bottom: 20px;">
+						<div style="border: 1px solid #d32f2f; border-radius: 12px; overflow: hidden; margin-bottom: 20px;">
+							<table style="width: 100%; font-size: 18px; color: #333;">
+									<!-- Title category "Popular" -->
+								<thead>
+									<tr style="background: #d32f2f; color: #ffffff;">
+										<th colspan="3" style="padding: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px;">Popular</th>
+									</tr>
+								</thead>
+									<!-- Actual items -->
+								<tbody>
+										<!-- First row -->
+									<tr>
+											<!-- Item container top left -->
+										<td style="padding: 12px; border: 1px solid #ddd;">
+												<!-- Food info conatainer -->
+											<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+													<!-- table inside div -->
+												<table>
+													<tr>
+															<!-- food name -->
+														<td style="padding: 12px; text-align: center;">
+															<h4 style="padding: 12px; text-align: left; color: #5A3E2B;">Baked <br> Macaroni</h4>
+														</td>
+															<!-- food picture -->
+														<td style="padding: 12px; text-align: right;">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+											<!-- Second food item -->
+										<td style="padding: 12px; border: 1px solid #ddd;">
+											<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+												<table>
+													<tr>
+														<td style="padding: 12px; text-align: center;">
+															<h4 style="padding: 12px; text-align: left; color: #5A3E2B;">Beef <br> Spaghetti</h4>
+														</td>
+														<td style="padding: 12px; text-align: right;">
+															<img src="https://images.deliveryhero.io/image/fd-ph/products/22689735.jpg?width=393.75&height=393.75" alt="Spaghetti" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+														</td>
+													</tr>
 													
-														<!-- food name -->
-													<td style="padding: 12px; text-align: center;">
-														<h4 style="padding: 12px; text-align: left; color: #5A3E2B;">Baked <br> Macaroni</h4>
-													</td>
-														<!-- food picture -->
-													<td style="padding: 12px; text-align: right;">
-														<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
-													</td>
-												</tr>
-											</table>
-										</div>
-									</td>
-
-										<!-- Second food item -->
-									<td style="padding: 12px; border: 1px solid #d32f2f;">
-										<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-											<table>
-												<tr>
-													<td style="padding: 12px; text-align: center;">
-														<h4 style="padding: 12px; text-align: left; color: #5A3E2B;">Beef <br> Spaghetti</h4>
-													</td>
-													<td style="padding: 12px; text-align: right;">
-														<img src="https://images.deliveryhero.io/image/fd-ph/products/22689735.jpg?width=393.75&height=393.75" alt="Spaghetti" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
-													</td>
-												</tr>
-												
-											</table>
-										</div>
-									</td>
-
-										<!-- Third food item -->
-									<td style="padding: 12px; border: 1px solid #d32f2f;">
-										<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-											<table>
-												<tr>
-													<td style="padding: 12px; text-align: center;">
-														<h4 style="padding: 12px; text-align: left; color: #5A3E2B;">Bilao <br> Beef <br> Spaghetti</h4>
-													</td>
-													<td style="padding: 12px; text-align: right;">
-														<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTtS_NXuE_aHROAWaxGO8BdklNeITCx3R8dr98DLgYGM-UOrhyyD51fXTM&s=10" alt="Paksiw" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
-													</td>
-												</tr>
-											</table>
-										</div>
-									</td>
-								</tr>
-
-									<!-- Second Row -->
-								<tr>
-									<td style="padding: 12px; border: 1px solid #d32f2f;">
-										<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-											<table>
-												<tr>
-													<td style="padding: 12px; text-align: center;">
-														<h4 style="padding: 12px; text-align: left; color: #5A3E2B;">Pancit <br> Palabok</h4>
-													</td>
-													<td style="padding: 12px; text-align: right;">
-														<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFpV_URXGKTuHuvASG0VS7VXkMVEHVAuOyF6y9mlkRfpddE_GbfsKlQVQ5&s=10" alt="Palabok" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
-													</td>
-												</tr>
-											</table>
-										</div>
-									</td>
-
-									<td style="padding: 12px; border: 1px solid #d32f2f;">
-										<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-											<table>
-												<tr>
-													<td style="padding: 12px; text-align: center;">
-														<h4 style="padding: 12px; text-align: left; color: #5A3E2B;">Pancit Palabok Bilao 300</h4>
-													</td>
-													<td style="padding: 12px; text-align: right;">
-														<img src="https://images.deliveryhero.io/image/fd-ph/Products/22695770.jpg?width=577.5&height=577.5" alt="Pancit Palabok 300" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
-													</td>
-												</tr>
-											</table>
-										</div>
-									</td>
-
-									<td style="padding: 12px; border: 1px solid #d32f2f;">
-										<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-											<table>
-												<tr>
-													<td style="padding: 12px; text-align: center;">
-														<h4 style="padding: 12px; text-align: left; color: #5A3E2B;">Pancit Palbok Bilao 600</h4>
-													</td>
-													<td style="padding: 12px; text-align: right;">
-														<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdx7n90-nGEM6GZUWVmX46qJjQHqBSONMIHAeT0hwnHYPUBwBP8kimo7VG&s=10" alt="Pancit Palabok 600" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
-													</td>
-												</tr>
-											</table>
-										</div>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+												</table>
+											</div>
+										</td>
+											<!-- Third food item -->
+										<td style="padding: 12px; border: 1px solid #ddd;">
+											<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+												<table>
+													<tr>
+														<td style="padding: 12px; text-align: center;">
+															<h4 style="padding: 12px; text-align: left; color: #5A3E2B;">Bilao <br> Beef <br> Spaghetti</h4>
+														</td>
+														<td style="padding: 12px; text-align: right;">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTtS_NXuE_aHROAWaxGO8BdklNeITCx3R8dr98DLgYGM-UOrhyyD51fXTM&s=10" alt="Paksiw" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+									</tr>
+										<!-- Second Row -->
+									<tr>
+										<td style="padding: 12px; border: 1px solid #ddd; border-bottom-left-radius: 12px;">
+											<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+												<table>
+													<tr>
+														<td style="padding: 12px; text-align: center;">
+															<h4 style="padding: 12px; text-align: left; color: #5A3E2B;">Pancit <br> Palabok</h4>
+														</td>
+														<td style="padding: 12px; text-align: right;">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFpV_URXGKTuHuvASG0VS7VXkMVEHVAuOyF6y9mlkRfpddE_GbfsKlQVQ5&s=10" alt="Palabok" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td style="padding: 12px; border: 1px solid #ddd;">
+											<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+												<table>
+													<tr>
+														<td style="padding: 12px; text-align: center;">
+															<h4 style="padding: 12px; text-align: left; color: #5A3E2B;">Pancit Palabok Bilao 300</h4>
+														</td>
+														<td style="padding: 12px; text-align: right;">
+															<img src="https://images.deliveryhero.io/image/fd-ph/Products/22695770.jpg?width=577.5&height=577.5" alt="Pancit Palabok 300" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td style="padding: 12px; border: 1px solid #ddd; border-bottom-right-radius: 12px;">
+											<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+												<table>
+													<tr>
+														<td style="padding: 12px; text-align: center;">
+															<h4 style="padding: 12px; text-align: left; color: #5A3E2B;">Pancit Palbok Bilao 600</h4>
+														</td>
+														<td style="padding: 12px; text-align: right;">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdx7n90-nGEM6GZUWVmX46qJjQHqBSONMIHAeT0hwnHYPUBwBP8kimo7VG&s=10" alt="Pancit Palabok 600" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
-				</div>
-
-					<!-- Title category "Noodles And Soup"-->
-				<div id="noodles-and-soup" style="background: #fff; border-radius: 20px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.50); margin-bottom: 20px;">
-					<div style="border: 1px solid #d32f2f; border-radius: 12px;">
-						<table style="width: 100%; border-collapse: collapse; font-size: 18px; color: #333;">
-							<thead>
-								<tr style="background: #d32f2f; color: white;">
-									<th colspan="3" style="padding: 12px; border: 1px solid #d32f2f; text-align: center;">Noodles And Soup</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td style="padding: 12px; border: 1px solid #ce5b5b71;">
-										<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-										
-										</div>
-									</td>
-									<td style="padding: 12px; border: 1px solid #ddd;">
-										<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
-									</td>
-									<td style="padding: 12px; border: 1px solid #ddd;">
-										<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
-									</td>
-								</tr>
-								<tr>
-									<td style="padding: 12px; border: 1px solid #ddd;">
-										<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
-									</td>
-									<td style="padding: 12px; border: 1px solid #ddd;">
-										<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
-									</td>
-									<td style="padding: 12px; border: 1px solid #ddd;">
-										<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+						<!-- Title category "Noodles And Soup"-->
+					<div id="noodles-and-soup" style="background: #fff; border-radius: 20px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.50); margin-bottom: 20px;">
+						<div style="border: 1px solid #d32f2f; border-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px;">
+							<table style="width: 100%; font-size: 18px; color: #333;">
+								<thead>
+									<tr style="background: #d32f2f; color: white;">
+										<th colspan="3" style="padding: 12px; border: 1px solid #d32f2f; text-align: center; border-top-left-radius: 12px; border-top-right-radius: 12px;">Noodles And Soup</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="padding: 12px; border: 1px solid #ce5b5b71;">
+											<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+											
+											</div>
+										</td>
+										<td style="padding: 12px; border: 1px solid #ddd;">
+											<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
+										</td>
+										<td style="padding: 12px; border: 1px solid #ddd;">
+											<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
+										</td>
+									</tr>
+									<tr>
+										<td style="padding: 12px; border: 1px solid #ddd;">
+											<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
+										</td>
+										<td style="padding: 12px; border: 1px solid #ddd;">
+											<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
+										</td>
+										<td style="padding: 12px; border: 1px solid #ddd;">
+											<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
-				</div>
-
-					<!-- Title category "Short Order"-->
-				<div id="short-order" style="background: #fff; border-radius: 20px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.50); margin-bottom: 20px;">
-					<div style="border: 1px solid #d32f2f; border-radius: 12px;">
-						<table style="width: 100%; border-collapse: collapse; font-size: 18px; color: #333;">
-							<thead>
-								<tr style="background: #d32f2f; color: white;">
-									<th colspan="3" style="padding: 12px; border: 1px solid #d32f2f; text-align: center;">Short Order</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td style="padding: 12px; border: 1px solid #ddd;">
-										<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
-									</td>
-									<td style="padding: 12px; border: 1px solid #ddd;">
-										<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
-									</td>
-									<td style="padding: 12px; border: 1px solid #ddd;">
-										<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
-									</td>
-								</tr>
-								<tr>
-									<td style="padding: 12px; border: 1px solid #ddd;">
-										<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
-									</td>
-									<td style="padding: 12px; border: 1px solid #ddd;">
-										<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
-									</td>
-									<td style="padding: 12px; border: 1px solid #ddd;">
-										<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+						<!-- Title category "Short Order"-->
+					<div id="short-order" style="background: #fff; border-radius: 20px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.50); margin-bottom: 20px;">
+						<div style="border: 1px solid #d32f2f; border-radius: 12px;">
+							<table style="width: 100%; border-collapse: collapse; font-size: 18px; color: #333;">
+								<thead>
+									<tr style="background: #d32f2f; color: white;">
+										<th colspan="3" style="padding: 12px; border: 1px solid #d32f2f; text-align: center;">Short Order</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="padding: 12px; border: 1px solid #ddd;">
+											<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
+										</td>
+										<td style="padding: 12px; border: 1px solid #ddd;">
+											<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
+										</td>
+										<td style="padding: 12px; border: 1px solid #ddd;">
+											<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
+										</td>
+									</tr>
+									<tr>
+										<td style="padding: 12px; border: 1px solid #ddd;">
+											<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
+										</td>
+										<td style="padding: 12px; border: 1px solid #ddd;">
+											<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
+										</td>
+										<td style="padding: 12px; border: 1px solid #ddd;">
+											<div style="width: 100%; height: 100%; border: 1px solid #d32f2f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
-				</div>
-
-					<!-- Title category "Sandwiches"-->
-				<div id="sandwiches" style="background: #fff; border-radius: 20px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.50); margin-bottom: 20px;">
-					<div style="border: 1px solid #d32f2f; border-radius: 12px;">
-						<table style="width: 100%; border-collapse: collapse; font-size: 18px; color: #333;">
-							<thead>
-								<tr style="background: #d32f2f; color: white;">
-									<th colspan="3" style="padding: 12px; border: 1px solid #d32f2f; text-align: center;">Sandwiches</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td style="padding: 12px; border: 1px solid #ddd;">
-										<div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
-									</td>
-									<td style="padding: 12px; border: 1px solid #ddd;">
-										<div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
-									</td>
-									<td style="padding: 12px; border: 1px solid #ddd;">
-										<div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
-									</td>
-								</tr>
-								<tr>
-									<td style="padding: 12px; border: 1px solid #ddd;">
-										<div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
-									</td>
-									<td style="padding: 12px; border: 1px solid #ddd;">
-										<div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
-									</td>
-									<td style="padding: 12px; border: 1px solid #ddd;">
-										<div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+						<!-- Title category "Sandwiches"-->
+					<div id="sandwiches" style="background: #fff; border-radius: 20px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.50); margin-bottom: 20px;">
+						<div style="border: 1px solid #d32f2f; border-radius: 12px;">
+							<table style="width: 100%; border-collapse: collapse; font-size: 18px; color: #333;">
+								<thead>
+									<tr style="background: #d32f2f; color: white;">
+										<th colspan="3" style="padding: 12px; border: 1px solid #d32f2f; text-align: center;">Sandwiches</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="padding: 12px; border: 1px solid #ddd;">
+											<div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
+										</td>
+										<td style="padding: 12px; border: 1px solid #ddd;">
+											<div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
+										</td>
+										<td style="padding: 12px; border: 1px solid #ddd;">
+											<div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
+										</td>
+									</tr>
+									<tr>
+										<td style="padding: 12px; border: 1px solid #ddd;">
+											<div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
+										</td>
+										<td style="padding: 12px; border: 1px solid #ddd;">
+											<div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
+										</td>
+										<td style="padding: 12px; border: 1px solid #ddd;">
+											<div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
-				</div>
-
-				<div id="specialty-of-the-house" style="background: #fff; border-radius: 20px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.50); margin-bottom: 20px;">
-					<div style="border: 1px solid #d32f2f; border-radius: 12px;">
-						<table style="width: 100%; border-collapse: collapse; font-size: 18px; color: #333;">
-							<thead>
-								<tr style="background: #d32f2f; color: white;">
-									<th colspan="3" style="padding: 12px; border: 1px solid #d32f2f; text-align: center;">Specialty Of the House</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-								</tr>
-								<tr>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-								</tr>
-							</tbody>
-						</table>
+					<div id="specialty-of-the-house" style="background: #fff; border-radius: 20px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.50); margin-bottom: 20px;">
+						<div style="border: 1px solid #d32f2f; border-radius: 12px;">
+							<table style="width: 100%; border-collapse: collapse; font-size: 18px; color: #333;">
+								<thead>
+									<tr style="background: #d32f2f; color: white;">
+										<th colspan="3" style="padding: 12px; border: 1px solid #d32f2f; text-align: center;">Specialty Of the House</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+									</tr>
+									<tr>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
-				</div>
-
-				<div id="lunch-others" style="background: #fff; border-radius: 20px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.50); margin-bottom: 20px;">
-					<div style="border: 1px solid #d32f2f; border-radius: 12px;">
-						<table style="width: 100%; border-collapse: collapse; font-size: 18px; color: #333;">
-							<thead>
-								<tr style="background: #d32f2f; color: white;">
-									<th colspan="3" style="padding: 12px; border: 1px solid #d32f2f; text-align: center;">Lunch &amp; Others</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-								</tr>
-								<tr>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-								</tr>
-							</tbody>
-						</table>
+					<div id="lunch-others" style="background: #fff; border-radius: 20px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.50); margin-bottom: 20px;">
+						<div style="border: 1px solid #d32f2f; border-radius: 12px;">
+							<table style="width: 100%; border-collapse: collapse; font-size: 18px; color: #333;">
+								<thead>
+									<tr style="background: #d32f2f; color: white;">
+										<th colspan="3" style="padding: 12px; border: 1px solid #d32f2f; text-align: center;">Lunch &amp; Others</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+									</tr>
+									<tr>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
-				</div>
-
-				<div id="spaghetti-pancit-sa-bilao" style="background: #fff; border-radius: 20px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.50); margin-bottom: 20px;">
-					<div style="border: 1px solid #d32f2f; border-radius: 12px;">
-						<table style="width: 100%; border-collapse: collapse; font-size: 18px; color: #333;">
-							<thead>
-								<tr style="background: #d32f2f; color: white;">
-									<th colspan="3" style="padding: 12px; border: 1px solid #d32f2f; text-align: center;">Spaghetti &amp; Pancit Sa Bilao</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-								</tr>
-								<tr>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-								</tr>
-							</tbody>
-						</table>
+					<div id="spaghetti-pancit-sa-bilao" style="background: #fff; border-radius: 20px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.50); margin-bottom: 20px;">
+						<div style="border: 1px solid #d32f2f; border-radius: 12px;">
+							<table style="width: 100%; border-collapse: collapse; font-size: 18px; color: #333;">
+								<thead>
+									<tr style="background: #d32f2f; color: white;">
+										<th colspan="3" style="padding: 12px; border: 1px solid #d32f2f; text-align: center;">Spaghetti &amp; Pancit Sa Bilao</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+									</tr>
+									<tr>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
-				</div>
-
-				<div id="desserts-and-sweets" style="background: #fff; border-radius: 20px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.50); margin-bottom: 20px;">
-					<div style="border: 1px solid #d32f2f; border-radius: 12px;">
-						<table style="width: 100%; border-collapse: collapse; font-size: 18px; color: #333;">
-							<thead>
-								<tr style="background: #d32f2f; color: white;">
-									<th colspan="3" style="padding: 12px; border: 1px solid #d32f2f; text-align: center;">Desserts And Sweets</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-								</tr>
-								<tr>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-								</tr>
-							</tbody>
-						</table>
+					<div id="desserts-and-sweets" style="background: #fff; border-radius: 20px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.50); margin-bottom: 20px;">
+						<div style="border: 1px solid #d32f2f; border-radius: 12px;">
+							<table style="width: 100%; border-collapse: collapse; font-size: 18px; color: #333;">
+								<thead>
+									<tr style="background: #d32f2f; color: white;">
+										<th colspan="3" style="padding: 12px; border: 1px solid #d32f2f; text-align: center;">Desserts And Sweets</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+									</tr>
+									<tr>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
-				</div>
-
-				<div id="cakes-bread" style="background: #fff; border-radius: 20px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.50); margin-bottom: 20px;">
-					<div style="border: 1px solid #d32f2f; border-radius: 12px;">
-						<table style="width: 100%; border-collapse: collapse; font-size: 18px; color: #333;">
-							<thead>
-								<tr style="background: #d32f2f; color: white;">
-									<th colspan="3" style="padding: 12px; border: 1px solid #d32f2f; text-align: center;">Cakes &amp; Bread</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-								</tr>
-								<tr>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-								</tr>
-							</tbody>
-						</table>
+					<div id="cakes-bread" style="background: #fff; border-radius: 20px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.50); margin-bottom: 20px;">
+						<div style="border: 1px solid #d32f2f; border-radius: 12px;">
+							<table style="width: 100%; border-collapse: collapse; font-size: 18px; color: #333;">
+								<thead>
+									<tr style="background: #d32f2f; color: white;">
+										<th colspan="3" style="padding: 12px; border: 1px solid #d32f2f; text-align: center;">Cakes &amp; Bread</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+									</tr>
+									<tr>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
-				</div>
-
-				<div id="coolers" style="background: #fff; border-radius: 20px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.50); margin-bottom: 20px;">
-					<div style="border: 1px solid #d32f2f; border-radius: 12px;">
-						<table style="width: 100%; border-collapse: collapse; font-size: 18px; color: #333;">
-							<thead>
-								<tr style="background: #d32f2f; color: white;">
-									<th colspan="3" style="padding: 12px; border: 1px solid #d32f2f; text-align: center;">Coolers</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-								</tr>
-								<tr>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-								</tr>
-							</tbody>
-						</table>
+					<div id="coolers" style="background: #fff; border-radius: 20px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.50); margin-bottom: 20px;">
+						<div style="border: 1px solid #d32f2f; border-radius: 12px;">
+							<table style="width: 100%; border-collapse: collapse; font-size: 18px; color: #333;">
+								<thead>
+									<tr style="background: #d32f2f; color: white;">
+										<th colspan="3" style="padding: 12px; border: 1px solid #d32f2f; text-align: center;">Coolers</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+									</tr>
+									<tr>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
-				</div>
-
-				<div id="softdrinks" style="background: #fff; border-radius: 20px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.50);">
-					<div style="border: 1px solid #d32f2f; border-radius: 12px;">
-						<table style="width: 100%; border-collapse: collapse; font-size: 18px; color: #333;">
-							<thead>
-								<tr style="background: #d32f2f; color: white;">
-									<th colspan="3" style="padding: 12px; border: 1px solid #d32f2f; text-align: center;">Softdrinks</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-								</tr>
-								<tr>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-									<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
-								</tr>
-							</tbody>
-						</table>
+					<div id="softdrinks" style="background: #fff; border-radius: 20px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.50);">
+						<div style="border: 1px solid #d32f2f; border-radius: 12px;">
+							<table style="width: 100%; border-collapse: collapse; font-size: 18px; color: #333;">
+								<thead>
+									<tr style="background: #d32f2f; color: white;">
+										<th colspan="3" style="padding: 12px; border: 1px solid #d32f2f; text-align: center;">Softdrinks</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+									</tr>
+									<tr>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+										<td style="padding: 12px; border: 1px solid #ddd;"><div style="width: 100%; height: 100%; background: #bab9b7; border-radius: 10px; display: flex; align-items: center; justify-content: center;">Item</div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-
 	</body>
 </html>
