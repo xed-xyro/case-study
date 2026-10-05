@@ -11,7 +11,7 @@ header{
 	}
 
 body{
-	background: url('images/joeysbg.png') no-repeat fixed;
+	background: url(images/joeysbg.png) no-repeat fixed;
 	background-size: cover;
 	}
 				
@@ -40,30 +40,11 @@ nav a{
 nav a:hover{
 	color: #d18b3f;
 }
-
-.order-btn {
-  background: #d32f2f;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 15px;
-  padding: 10px 18px;
-  border-radius: 30px;
-  border: 2px solid white;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  transition: background 0.2s ease;
-}
-
-.order-btn:hover {
-  background: #a30000;
-  color: white;
-}
 				
 .nav-box nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
 }
 
 .search-bar {
@@ -140,37 +121,118 @@ nav a:hover{
 .container a:hover {
   color: #ff6600;
 }
-h1 {
+/* Layout */
+.menu-layout {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+.menu-sidebar {
+  width: 22%;
+  background: #ffffffd2;
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.menu-nav {
+  background: #fff;
+  padding: 14px 12px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.50);
+}
+
+.menu-nav h1 {
   text-align: center;
   color: #5A3E2B;
-  margin-bottom: 20px;
+  margin: 0 0 12px;
+  font-size: 1.7rem;
 }
 
-.controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.add-review-toggle,
-.submit-btn {
-  background: #e10600;
+.menu-link {
+  display: block;
+  text-decoration: none;
   color: white;
-  border: 2px solid white;
-  border-radius: 20px;
-  padding: 10px 22px;
-  font-size: 16px;
+  background: #d32f2f;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
   font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  font-size: 0.82rem;
+  line-height: 1.2;
 }
 
-.add-review-toggle:hover,
-.submit-btn:hover {
-  background: #a30000;
+.menu-content {
+  width: 78%;
+  max-height: 600px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border-radius: 20px;
 }
 
+.menu-card {
+  background: #ffffffd2;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.menu-table {
+  width: 100%;
+  font-size: 18px;
+  color: #333;
+  border-collapse: collapse;
+}
+
+.menu-table th {
+  background: #d32f2f;
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 12px 12px 0 0;
+}
+
+.food-item {
+  border: 1px solid #d32f2f;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+}
+
+.food-item h4 {
+  color: #5A3E2B;
+  margin-bottom: 10px;
+}
+
+.food-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.food-placeholder {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #d32f2f;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  margin-top: 20px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+/* Review form */
 .add-review-form {
   display: none;
   background: white;
@@ -178,6 +240,10 @@ h1 {
   border: 1px solid #e0c68f;
   border-radius: 15px;
   margin-bottom: 15px;
+}
+
+.add-review-form.show {
+  display: block;
 }
 
 .add-review-form h3 {
@@ -195,11 +261,6 @@ h1 {
 
 .field {
   flex: 1;
-  margin-bottom: 15px;
-}
-
-.form-row .field {
-  margin-bottom: 0;
 }
 
 .add-review-form label {
@@ -219,26 +280,60 @@ h1 {
   font-size: 16px;
 }
 
-.add-review-form input[type="text"]:focus,
-.add-review-form textarea:focus {
-  border-color: #e10600;
-  outline: none;
-}
-
 .add-review-form textarea {
   height: 110px;
   resize: vertical;
 }
 
-.rating-label {
-  color: #5A3E2B;
-  font-size: 14px;
-  font-weight: bold;
+/* Star picker */
+.star-picker span {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ccc;
+  margin-right: 5px;
 }
 
+.star-picker span.active {
+  color: #ffb400;
+}
+
+/* Buttons */
+.add-review-toggle,
+.submit-btn {
+  background: #e10600;
+  color: white;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 10px 22px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+.add-review-toggle:hover,
+.submit-btn:hover {
+  background: #a30000;
+}
+
+/* Messages */
+#thankYouMsg {
+  color: green;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 15px;
+}
+
+.empty-state {
+  display: none;
+  color: #666;
+  font-style: italic;
+  text-align: center;
+  margin-top: 10px;
+}
 footer {
   text-align: center;
-  color: white;
+  color: #fff;
   font-size: 14px;
   padding: 20px;
   text-shadow: 1px 1px 3px black;
