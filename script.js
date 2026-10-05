@@ -1,81 +1,49 @@
-let reviewForm = document.getElementById("reviewForm");
-let thankYouMsg = document.getElementById("thankYouMsg");
-let toggleFormBtn = document.getElementById("toggleFormBtn");
-let addForm = document.getElementById("addForm");
-let starPicker = document.getElementById("starPicker");
+const reviewForm = document.getElementById("reviewForm");
+const thankYouMsg = document.getElementById("thankYouMsg");
+const toggleFormBtn = document.getElementById("toggleFormBtn");
+const addForm = document.getElementById("addForm");
+const starPicker = document.getElementById("starPicker");
 
 let selectedRating = 0;
+const stars = starPicker.getElementsByTagName("span");
 
-let stars = starPicker.getElementsByTagName("span");
-
-for (let i = 0; i < stars.length; i++) {
-  stars[i].style.cursor = "pointer";
-  stars[i].style.fontSize = "1.5rem";
-  stars[i].style.color = "#ccc"; 
-  
-  stars[i].addEventListener("click", function() {
-    
-    selectedRating = Number(this.getAttribute("data-v"));
-    
-    for (let j = 0; j < stars.length; j++) {
-      if (Number(stars[j].getAttribute("data-v")) <= selectedRating) {
-        stars[j].style.color = "#ffb400"; 
-      } else {
-        stars[j].style.color = "#ccc"; 
-      }
+// Star rating logic
+for (let star of stars) {
+  star.addEventListener("click", () => {
+    selectedRating = Number(star.getAttribute("data-v"));
+    for (let s of stars) {
+      s.classList.toggle("active", Number(s.getAttribute("data-v")) <= selectedRating);
     }
   });
 }
 
-toggleFormBtn.addEventListener("click", function() {
-  if (addForm.style.display === "none" || addForm.style.display === "") {
-    addForm.style.display = "block";
-    toggleFormBtn.innerText = "✕ Close form";
-  } else {
-    addForm.style.display = "none";
-    toggleFormBtn.innerText = "+ Write a review";
-  }
+// Toggle form
+toggleFormBtn.addEventListener("click", () => {
+  addForm.classList.toggle("show");
+  toggleFormBtn.innerText = addForm.classList.contains("show")
+    ? "✕ Close form"
+    : "+ Write a review";
 });
 
-reviewForm.addEventListener("submit", function(event) {
-  event.preventDefault(); 
-  
-  if (selectedRating == 0) {
+// Submit review
+reviewForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  if (selectedRating === 0) {
     alert("Please choose a star rating first.");
     return;
   }
 
-  let name = document.getElementById("nameInput").value;
-  
-  thankYouMsg.innerText = "Salamat, " + name + "! Thank you for your " + selectedRating + "-star review for Joey's Restaurant Café.";
-  
-  alert("Thank you for your feedback, " + name + "!");
-  
-  reviewForm.reset();
-  for (let i = 0; i < stars.length; i++) {
-    stars[i].style.color = "#ccc";
-  }
-  selectedRating = 0;
-  
-  addForm.style.display = "none";
-  toggleFormBtn.innerText = "+ Write a review";
-});
+  const name = document.getElementById("nameInput").value;
+  thankYouMsg.innerText = `Salamat, ${name}! Thank you for your ${selectedRating}-star review for Joey's Restaurant Café.`;
+  alert(`Thank you for your feedback, ${name}!`);
 
-reviewForm.addEventListener("submit", function(event) {
-  event.preventDefault(); 
-
-  let name = document.getElementById("nameInput").value;
-  
-  thankYouMsg.innerText = "Salamat, " + name + "! Thank you for your " + selectedRating + "-star review for Joey's Restaurant Café.";
-  
-  alert("Thank you for your feedback, " + name + "!");
-  
+  // Reset form
   reviewForm.reset();
-  for (let i = 0; i < stars.length; i++) {
-    stars[i].style.color = "#ccc";
-  }
+  for (let s of stars) s.classList.remove("active");
   selectedRating = 0;
-  
-  addForm.style.display = "none";
+
+  // Hide form again
+  addForm.classList.remove("show");
   toggleFormBtn.innerText = "+ Write a review";
 });
