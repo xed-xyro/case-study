@@ -36,7 +36,6 @@ reviewForm.addEventListener("submit", (event) => {
 
   const name = document.getElementById("nameInput").value;
   thankYouMsg.innerText = `Salamat, ${name}! Thank you for your ${selectedRating}-star review for Joey's Restaurant Café.`;
-  alert(`Thank you for your feedback, ${name}!`);
 
   // Reset form
   reviewForm.reset();
