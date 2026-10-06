@@ -2,466 +2,463 @@
 <html>
 	<head> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
 		<title>Joey's Restaurant Cafe</title>
 		<link rel="icon" type="image/icon" href="images/joey'slogo.jpg">
 		<link rel="stylesheet" href="joeys.css">
 	</head>
-	<body>
+	<body>		<!-- All following styles are inline for now -->
 			<!-- Sign in counter: 7 -->
 		<!-- This is the navigation bar with a search bar on top of page -->
-	<div class="nav-box" > 
+	<div class="nav-box">
 		<nav>
 			<a href="index.html">Home</a>
 			<a href="menu.html">Menu</a>
 			<a href="about.html">About</a>
 			<a href="contact.html">Contact</a>
 			<form action="#" method="POST" class="search-bar">
-						<input type="search" placeholder="Search                   🔍">
-					</form>
+				<input type="search" placeholder="Search                   🔍">
+			</form>
 			<a href="https://www.foodpanda.ph/restaurant/b6ho/joeys-restaurant-cafe-general-luna-street" target="_blank" rel="noopener noreferrer" class="order-btn">Order Now!</a>
 		</nav>
 	</div>
 			<!-- This is the biggest div containing a left and right column -->
-		<div class="menu-layout"> 
-				<!-- This is the transparent part of the border -->
-			<div class="menu-sidebar">
-					<!-- Controls of the menu nav bar -->
-				<div class="menu-nav">
-					<h1 class="menu-title">Menu</h1>
-					<a href="#popular" class="menu-link">Popular</a>
-					<a href="#noodles-and-soup" class="menu-link">Noodles And Soup</a>
-					<a href="#short-order" class="menu-link">Short Order</a>
-					<a href="#sandwiches" class="menu-link">Sandwiches</a>
-					<a href="#specialty-of-the-house" class="menu-link">Specialty Of the House</a>
-					<a href="#lunch-others" class="menu-link">Lunch &amp; Others</a>
-					<a href="#spaghetti-pancit-sa-bilao" class="menu-link">Spaghetti &amp; Pancit Sa Bilao</a>
-					<a href="#desserts-and-sweets" class="menu-link">Desserts And Sweets</a>
-					<a href="#cakes-bread" class="menu-link">Cakes &amp; Bread</a>
-					<a href="#coolers" class="menu-link">Coolers</a>
-					<a href="#softdrinks" class="menu-link">Softdrinks</a>
-				</div>
+		<div class="menu-layout">
+				<!-- Controls of the menu nav bar -->
+			<div class="menu-controls">
+				<h2 class="menu-controls-title">View Menu</h2>
+				<select class="menu-category-select" id="menu-category-select">
+					<option value="all">All Menu Items</option>
+					<option value="popular">Popular</option>
+					<option value="noodles-and-soup">Noodles And Soup</option>
+					<option value="short-order">Short Order</option>
+					<option value="sandwiches">Sandwiches</option>
+					<option value="specialty-of-the-house">Specialty Of the House</option>
+					<option value="lunch-others">Lunch &amp; Others</option>
+					<option value="spaghetti-pancit-sa-bilao">Spaghetti &amp; Pancit Sa Bilao</option>
+					<option value="desserts-and-sweets">Desserts And Sweets</option>
+					<option value="cakes-bread">Cakes &amp; Bread</option>
+					<option value="coolers">Coolers</option>
+					<option value="softdrinks">Softdrinks</option>
+				</select>
 			</div>
 				<!-- This is the border of the big menu on the right -->
 			<div class="menu-content">
-					<!-- This is the border for the whole menu -->
-				<div id="menu" class="menu-card">
-						<!-- This is the border for the popular category see id="popular" -->
-					<section  id="popular">
-						<div class="menu-category">
-							<div class="menu-category-frame menu-popular-frame">
-								<table class="menu-table">
-										<!-- Title category "Popular" -->
-									<thead>
-										<tr class="menu-table-heading">
-											<th colspan="3" class="menu-table-heading-cell">Popular</th>
-										</tr>
-									</thead>
-										<!-- Actual items -->
-									<tbody>
-											<!-- First row -->
-										<tr>
-												<!-- Item container top left -->
-											<td class="menu-table-cell">
-													<!-- Food info conatainer -->
-												<div class="food-item">
-														<!-- table inside div -->
-													<table>
-														<tr>
-																<!-- food name -->
-															<td class="menu-item-name-cell">
-																<h4 class="menu-item-name">Baked <br> Macaroni</h4>
-															</td>
-																<!-- food picture -->
-															<td class="menu-item-image-cell">
-																<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
-															</td>
-														</tr>
-													</table>
-												</div>
-											</td>
-												<!-- Second food item -->
-											<td class="menu-table-cell">
-												<div class="food-item">
-													<table>
-														<tr>
-															<td class="menu-item-name-cell">
-																<h4 class="menu-item-name">Beef <br> Spaghetti</h4>
-															</td>
-															<td class="menu-item-image-cell">
-																<img src="https://images.deliveryhero.io/image/fd-ph/products/22689735.jpg?width=393.75&height=393.75" alt="Spaghetti" class="menu-item-image">
-															</td>
-														</tr>
-														
-													</table>
-												</div>
-											</td>
-												<!-- Third food item -->
-											<td class="menu-table-cell">
-												<div class="food-item">
-													<table>
-														<tr>
-															<td class="menu-item-name-cell">
-																<h4 class="menu-item-name">Bilao <br> Beef <br> Spaghetti</h4>
-															</td>
-															<td class="menu-item-image-cell">
-																<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTtS_NXuE_aHROAWaxGO8BdklNeITCx3R8dr98DLgYGM-UOrhyyD51fXTM&s=10" alt="Paksiw" class="menu-item-image">
-															</td>
-														</tr>
-													</table>
-												</div>
-											</td>
-										</tr>
-											<!-- Second Row -->
-										<tr>
-											<td class="menu-table-cell menu-table-cell-first">
-												<div class="food-item">
-													<table>
-														<tr>
-															<td class="menu-item-name-cell">
-																<h4 class="menu-item-name">Pancit <br> Palabok</h4>
-															</td>
-															<td class="menu-item-image-cell">
-																<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFpV_URXGKTuHuvASG0VS7VXkMVEHVAuOyF6y9mlkRfpddE_GbfsKlQVQ5&s=10" alt="Palabok" class="menu-item-image">
-															</td>
-														</tr>
-													</table>
-												</div>
-											</td>
-											<td class="menu-table-cell">
-												<div class="food-item">
-													<table>
-														<tr>
-															<td class="menu-item-name-cell">
-																<h4 class="menu-item-name">Pancit Palabok Bilao 300</h4>
-															</td>
-															<td class="menu-item-image-cell">
-																<img src="https://images.deliveryhero.io/image/fd-ph/Products/22695770.jpg?width=577.5&height=577.5" alt="Pancit Palabok 300" class="menu-item-image">
-															</td>
-														</tr>
-													</table>
-												</div>
-											</td>
-											<td class="menu-table-cell menu-table-cell-last">
-												<div class="food-item">
-													<table>
-														<tr>
-															<td class="menu-item-name-cell">
-																<h4 class="menu-item-name">Pancit Palabok Bilao 600</h4>
-															</td>
-															<td class="menu-item-image-cell">
-																<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdx7n90-nGEM6GZUWVmX46qJjQHqBSONMIHAeT0hwnHYPUBwBP8kimo7VG&s=10" alt="Pancit Palabok 600" class="menu-item-image">
-															</td>
-														</tr>
-													</table>
-												</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+					<!-- This is the border for the popular menu items, see id="popular" -->
+				<section  id="popular">
+					<div class="menu-category">
+						<div class="menu-category-frame menu-category-frame--popular">
+							<table class="menu-category-table">
+									<!-- Title category "Popular" -->
+								<thead>
+									<tr class="menu-category-header">
+										<th colspan="3" class="menu-category-heading menu-category-heading--rounded">Popular</th>
+									</tr>
+								</thead>
+									<!-- Actual items -->
+								<tbody>
+										<!-- First row -->
+									<tr>
+											<!-- Item container top left -->
+										<td class="menu-cell">
+												<!-- Food info conatainer -->
+											<div class="menu-item-tile">
+													<!-- table inside div -->
+												<table>
+													<tr>
+															<!-- food name -->
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+															<!-- food picture -->
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+											<!-- Second food item -->
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Beef Spaghetti</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://images.deliveryhero.io/image/fd-ph/products/22689735.jpg?width=393.75&height=393.75" alt="Spaghetti" class="menu-item-image">
+														</td>
+													</tr>
+													
+												</table>
+											</div>
+										</td>
+											<!-- Third food item -->
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Bilao Beef Spaghetti</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTtS_NXuE_aHROAWaxGO8BdklNeITCx3R8dr98DLgYGM-UOrhyyD51fXTM&s=10" alt="Paksiw" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+									</tr>
+										<!-- Second Row -->
+									<tr>
+										<td class="menu-cell menu-cell--bottom-left">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Pancit Palabok</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFpV_URXGKTuHuvASG0VS7VXkMVEHVAuOyF6y9mlkRfpddE_GbfsKlQVQ5&s=10" alt="Palabok" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Pancit Palabok Bilao 300</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://images.deliveryhero.io/image/fd-ph/Products/22695770.jpg?width=577.5&height=577.5" alt="Pancit Palabok 300" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell menu-cell--bottom-right">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Pancit Palabok Bilao 600</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdx7n90-nGEM6GZUWVmX46qJjQHqBSONMIHAeT0hwnHYPUBwBP8kimo7VG&s=10" alt="Pancit Palabok 600" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
-					</section>
-						<!-- Title category "Noodles And Soup"-->
-					<section id="noodles-and-soup">
-						<div class="menu-category">
-							<div class="menu-category-frame">
-								<table class="menu-table">
-									<thead>
-										<tr class="menu-table-heading">
-											<th colspan="3" class="menu-table-heading-cell">Noodles And Soup</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td class="menu-table-cell menu-table-cell-muted">
-												<div class="food-item">
-												
-												</div>
-											</td>
-											<td class="menu-table-cell">
-												<div class="food-item">Item</div>
-											</td>
-											<td class="menu-table-cell">
-												<div class="food-item">Item</div>
-											</td>
-										</tr>
-										<tr>
-											<td class="menu-table-cell">
-												<div class="food-item">Item</div>
-											</td>
-											<td class="menu-table-cell">
-												<div class="food-item">Item</div>
-											</td>
-											<td class="menu-table-cell">
-												<div class="food-item">Item</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+					</div>
+				</section>
+					<!-- Title category "Noodles And Soup"-->
+				<section id="noodles-and-soup">
+					<div class="menu-category">
+						<div class="menu-category-frame">
+							<table class="menu-category-table">
+								<thead>
+									<tr class="menu-category-header">
+										<th colspan="3" class="menu-category-heading menu-category-heading--rounded">Noodles And Soup</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+											
+											</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">Item</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">Item</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="menu-cell menu-cell--bottom-left">
+											<div class="menu-item-tile">Item</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">Item</div>
+										</td>
+										<td class="menu-cell menu-cell--bottom-right">
+											<div class="menu-item-tile">Item</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
-					</section>
-						<!-- Title category "Short Order"-->
-					<section id="short-order">
-						<div class="menu-category">
-							<div class="menu-category-frame">
-								<table class="menu-table">
-									<thead>
-										<tr class="menu-table-heading">
-											<th colspan="3" class="menu-table-heading-cell">Short Order</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td class="menu-table-cell">
-												<div class="food-item">Item</div>
-											</td>
-											<td class="menu-table-cell">
-												<div class="food-item">Item</div>
-											</td>
-											<td class="menu-table-cell">
-												<div class="food-item">Item</div>
-											</td>
-										</tr>
-										<tr>
-											<td class="menu-table-cell">
-												<div class="food-item">Item</div>
-											</td>
-											<td class="menu-table-cell">
-												<div class="food-item">Item</div>
-											</td>
-											<td class="menu-table-cell">
-												<div class="food-item">Item</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+					</div>
+				</section>
+					<!-- Title category "Short Order"-->
+				<section id="short-order">
+					<div class="menu-category">
+						<div class="menu-category-frame">
+							<table class="menu-category-table">
+								<thead>
+									<tr class="menu-category-header">
+										<th colspan="3" class="menu-category-heading menu-category-heading--rounded">Short Order</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="menu-cell">
+											<div class="menu-item-tile">Item</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">Item</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">Item</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="menu-cell menu-cell--bottom-left">
+											<div class="menu-item-tile">Item</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">Item</div>
+										</td>
+										<td class="menu-cell menu-cell--bottom-right">
+											<div class="menu-item-tile">Item</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
-					</section>
-						<!-- Title category "Sandwiches"-->
-					<section id="sandwiches">
-						<div class="menu-category">
-							<div class="menu-category-frame">
-								<table class="menu-table">
-									<thead>
-										<tr class="menu-table-heading">
-											<th colspan="3" class="menu-table-heading-cell">Sandwiches</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td class="menu-table-cell">
-												<div class="menu-placeholder">Item</div>
-											</td>
-											<td class="menu-table-cell">
-												<div class="menu-placeholder">Item</div>
-											</td>
-											<td class="menu-table-cell">
-												<div class="menu-placeholder">Item</div>
-											</td>
-										</tr>
-										<tr>
-											<td class="menu-table-cell">
-												<div class="menu-placeholder">Item</div>
-											</td>
-											<td class="menu-table-cell">
-												<div class="menu-placeholder">Item</div>
-											</td>
-											<td class="menu-table-cell">
-												<div class="menu-placeholder">Item</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+					</div>
+				</section>
+					<!-- Title category "Sandwiches"-->
+				<section id="sandwiches">
+					<div class="menu-category">
+						<div class="menu-category-frame">
+							<table class="menu-category-table">
+								<thead>
+									<tr class="menu-category-header">
+										<th colspan="3" class="menu-category-heading menu-category-heading--rounded">Sandwiches</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="menu-cell">
+											<div class="menu-placeholder">Item</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-placeholder">Item</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-placeholder">Item</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="menu-cell menu-cell--bottom-left">
+											<div class="menu-placeholder">Item</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-placeholder">Item</div>
+										</td>
+										<td class="menu-cell menu-cell--bottom-right">
+											<div class="menu-placeholder">Item</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
-					</section>
-						<!-- Title category "Specialty Of the House"-->
-					<section id="specialty-of-the-house">
-						<div class="menu-category">
-							<div class="menu-category-frame">
-								<table class="menu-table">
-									<thead>
-										<tr class="menu-table-heading">
-											<th colspan="3" class="menu-table-heading-cell">Specialty Of the House</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-										</tr>
-										<tr>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+					</div>
+				</section>
+					<!-- Title category "Specialty Of the House"-->
+				<section id="specialty-of-the-house">
+					<div class="menu-category">
+						<div class="menu-category-frame">
+							<table class="menu-category-table">
+								<thead>
+									<tr class="menu-category-header">
+										<th colspan="3" class="menu-category-heading menu-category-heading--rounded">Specialty Of the House</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+									</tr>
+									<tr>
+										<td class="menu-cell menu-cell--bottom-left"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell menu-cell--bottom-right"><div class="menu-placeholder">Item</div></td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
-					</section>
-						<!-- Title category "Lunch & Others"-->
-					<section id="lunch-others">
-						<div class="menu-category">
-							<div class="menu-category-frame">
-								<table class="menu-table">
-									<thead>
-										<tr class="menu-table-heading">
-											<th colspan="3" class="menu-table-heading-cell">Lunch &amp; Others</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-										</tr>
-										<tr>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+					</div>
+				</section>
+					<!-- Title category "Lunch & Others"-->
+				<section id="lunch-others">
+					<div class="menu-category">
+						<div class="menu-category-frame">
+							<table class="menu-category-table">
+								<thead>
+									<tr class="menu-category-header">
+										<th colspan="3" class="menu-category-heading menu-category-heading--rounded">Lunch &amp; Others</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+									</tr>
+									<tr>
+										<td class="menu-cell menu-cell--bottom-left"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell menu-cell--bottom-right"><div class="menu-placeholder">Item</div></td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
-					</section>
-						<!-- Title category "Spaghetti & Pancit Sa Bilao"-->
-					<section id="spaghetti-pancit-sa-bilao">
-						<div class="menu-category">
-							<div class="menu-category-frame">
-								<table class="menu-table">
-									<thead>
-										<tr class="menu-table-heading">
-											<th colspan="3" class="menu-table-heading-cell">Spaghetti &amp; Pancit Sa Bilao</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-										</tr>
-										<tr>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+					</div>
+				</section>
+					<!-- Title category "Spaghetti & Pancit Sa Bilao"-->
+				<section id="spaghetti-pancit-sa-bilao">
+					<div class="menu-category">
+						<div class="menu-category-frame">
+							<table class="menu-category-table">
+								<thead>
+									<tr class="menu-category-header">
+										<th colspan="3" class="menu-category-heading menu-category-heading--rounded">Spaghetti &amp; Pancit Sa Bilao</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+									</tr>
+									<tr>
+										<td class="menu-cell menu-cell--bottom-left"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell menu-cell--bottom-right"><div class="menu-placeholder">Item</div></td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
-					</section>
-						<!-- Title category "Desserts And Sweets"-->
-					<section id="desserts-and-sweets">
-						<div class="menu-category">
-							<div class="menu-category-frame">
-								<table class="menu-table">
-									<thead>
-										<tr class="menu-table-heading">
-											<th colspan="3" class="menu-table-heading-cell">Desserts And Sweets</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-										</tr>
-										<tr>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+					</div>
+				</section>
+					<!-- Title category "Desserts And Sweets"-->
+				<section id="desserts-and-sweets">
+					<div class="menu-category">
+						<div class="menu-category-frame">
+							<table class="menu-category-table">
+								<thead>
+									<tr class="menu-category-header">
+										<th colspan="3" class="menu-category-heading menu-category-heading--rounded">Desserts And Sweets</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+									</tr>
+									<tr>
+										<td class="menu-cell menu-cell--bottom-left"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell menu-cell--bottom-right"><div class="menu-placeholder">Item</div></td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
-					</section>
-						<!-- Title category "Cakes & Bread"-->
-					<section id="cakes-bread">
-						<div class="menu-category">
-							<div class="menu-category-frame">
-								<table class="menu-table">
-									<thead>
-										<tr class="menu-table-heading">
-											<th colspan="3" class="menu-table-heading-cell">Cakes &amp; Bread</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-										</tr>
-										<tr>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+					</div>
+				</section>
+					<!-- Title category "Cakes & Bread"-->
+				<section id="cakes-bread">
+					<div class="menu-category">
+						<div class="menu-category-frame">
+							<table class="menu-category-table">
+								<thead>
+									<tr class="menu-category-header">
+										<th colspan="3" class="menu-category-heading menu-category-heading--rounded">Cakes &amp; Bread</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+									</tr>
+									<tr>
+										<td class="menu-cell menu-cell--bottom-left"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell menu-cell--bottom-right"><div class="menu-placeholder">Item</div></td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
-					</section>
-						<!-- Title category "Coolers"-->
-					<section id="coolers">
-						<div class="menu-category">
-							<div class="menu-category-frame">
-								<table class="menu-table">
-									<thead>
-										<tr class="menu-table-heading">
-											<th colspan="3" class="menu-table-heading-cell">Coolers</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-										</tr>
-										<tr>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+					</div>
+				</section>
+					<!-- Title category "Coolers"-->
+				<section id="coolers">
+					<div class="menu-category">
+						<div class="menu-category-frame">
+							<table class="menu-category-table">
+								<thead>
+									<tr class="menu-category-header">
+										<th colspan="3" class="menu-category-heading menu-category-heading--rounded">Coolers</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+									</tr>
+									<tr>
+										<td class="menu-cell menu-cell--bottom-left"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell menu-cell--bottom-right"><div class="menu-placeholder">Item</div></td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
-					</section>
-						<!-- Title category "Softdrinks"-->
-					<section id="softdrinks">
-						<div class="menu-category">
-							<div class="menu-category-frame">
-								<table class="menu-table">
-									<thead>
-										<tr class="menu-table-heading">
-											<th colspan="3" class="menu-table-heading-cell">Softdrinks</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-										</tr>
-										<tr>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-											<td class="menu-table-cell"><div class="menu-placeholder">Item</div></td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+					</div>
+				</section>
+					<!-- Title category "Softdrinks"-->
+				<section id="softdrinks">
+					<div class="menu-category menu-category--last">
+						<div class="menu-category-frame">
+							<table class="menu-category-table">
+								<thead>
+									<tr class="menu-category-header">
+										<th colspan="3" class="menu-category-heading menu-category-heading--rounded">Softdrinks</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+									</tr>
+									<tr>
+										<td class="menu-cell menu-cell--bottom-left"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell menu-cell--bottom-right"><div class="menu-placeholder">Item</div></td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
-					</section>
-				</div>
+					</div>
+				</section>			
 			</div>
 		</div>
+		<script src="menu-filter.js"></script>
 	</body>
 </html>
