@@ -44,7 +44,8 @@ nav a {
   transition: all 0.3s ease;
 }
 
-nav a:hover {
+nav a:hover,
+nav a[aria-current="page"] {
   font-size: 20px;
   color: white;
   background: #d32f2f;
@@ -563,6 +564,9 @@ h1 {
 }
 
 .add-review-toggle:hover,
+.add-review-toggle[aria-expanded="true"],
+.add-review-toggle:active,
+.submit-btn:active,
 .submit-btn:hover {
   background: #a30000;
 }
