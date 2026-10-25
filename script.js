@@ -26,7 +26,9 @@ if (reviewForm && toggleFormBtn && addForm && starPicker) {
   // Toggle review form
   toggleFormBtn.addEventListener("click", () => {
     addForm.classList.toggle("show");
-    toggleFormBtn.textContent = addForm.classList.contains("show")
+    const isFormOpen = addForm.classList.contains("show");
+    toggleFormBtn.setAttribute("aria-expanded", String(isFormOpen));
+    toggleFormBtn.textContent = isFormOpen
       ? "✕ Close form"
       : "+ Write a review";
   });
@@ -64,6 +66,7 @@ if (reviewForm && toggleFormBtn && addForm && starPicker) {
 
     // Hide form again
     addForm.classList.remove("show");
+    toggleFormBtn.setAttribute("aria-expanded", "false");
     toggleFormBtn.textContent = "+ Write a review";
   });
 }
