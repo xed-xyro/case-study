@@ -54,6 +54,7 @@ nav a:hover {
 }
 
 .search-bar {
+  position: relative;
   display: flex;
   flex: 1 1 180px;
   min-width: 0;
@@ -64,7 +65,7 @@ nav a:hover {
   background: white;
   border: 2px solid #d32f2f;
   border-radius: 30px;
-  padding: 5px 15px;
+  padding: 6px 42px 5px 15px;
   width: 100%;
   min-width: 0;
   box-shadow: 0 0 5px rgba(229, 70, 70, 0.55);
@@ -85,9 +86,18 @@ nav a:hover {
   transition-timing-function: ease-in;
 }
 
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
 .search-bar input::placeholder {
   color: #5A3E2B;
   font-weight: bold;
+  padding-top: 20px;
 }
 
 .search-bar input[type="search"]:focus::placeholder {
@@ -202,11 +212,6 @@ nav a:hover {
   transition: background-color 0.2s ease, border-radius 0.25s ease;
 }
 
-.menu-category-select:focus-visible {
-  outline: 3px solid rgba(211, 47, 47, 0.35);
-  outline-offset: 2px;
-}
-
 .menu-category-icon {
   position: relative;
   flex: 0 0 14px;
@@ -242,8 +247,8 @@ nav a:hover {
 .menu-category-picker.is-open .menu-category-select {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  background: white;
-  color: #333;
+  background: #d32f2f;
+  color: white;
   border: 2px solid #d32f2f;
 }
 
@@ -270,6 +275,7 @@ nav a:hover {
   border: 2px solid #d32f2f;
   border-radius: 0 0 10px 10px;
   background: white;
+  background: white linear-gradient(rgba(211, 47, 47, 0.1), rgb(255, 255, 255));
   outline: none;
   box-shadow: 0 4px 12px rgba(244, 45, 14, 0.5);
   opacity: 0;
