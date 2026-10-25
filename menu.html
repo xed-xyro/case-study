@@ -3,10 +3,12 @@
 	<head> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Joey's Restaurant Cafe</title>
-		<link rel="icon" type="image/icon" href="images/joey'slogo.jpg">
+		<link rel="icon" type="image/icon" href="images/joeys-icon.png">
 		<link rel="stylesheet" href="joeys.css">
 	</head>
-	<body>
+	<body>		<!-- All following styles are inline for now -->
+			<!-- Sign in counter: 7 -->
+		<!-- This is the navigation bar with a search bar on top of page -->
 	<div class="nav-box">
 		<nav>
 			<a href="index.html">Home</a>
@@ -14,9 +16,9 @@
 			<a href="about.html">About</a>
 			<a href="contact.html">Contact</a>
 			<form action="#" method="POST" class="search-bar">
-				<input type="search" placeholder="Search                   🔍">
+						<input type="search" placeholder="Search">
 			</form>
-			<a href="https://www.foodpanda.ph/restaurant/b6ho/joeys-restaurant-cafe-general-luna-street" target="_blank" rel="noopener noreferrer" class="order-btn">Order Now!</a>
+			<a href="https://www.foodpanda.ph/restaurant/b6ho/joeys-restaurant-cafe-general-luna-street" target="_blank" class="order-btn" onclick="return confirm('You are about to be redirected to Foodpanda. Do you want to continue?');">Order Now!</a>
 		</nav>
 	</div>
 			<!-- This is the biggest div containing a left and right column -->
@@ -24,20 +26,29 @@
 				<!-- Controls of the menu nav bar -->
 			<div class="menu-controls">
 				<h2 class="menu-controls-title">View Menu</h2>
-				<select class="menu-category-select" id="menu-category-select">
-					<option value="all">All Menu Items</option>
-					<option value="popular">Popular</option>
-					<option value="noodles-and-soup">Noodles And Soup</option>
-					<option value="short-order">Short Order</option>
-					<option value="sandwiches">Sandwiches</option>
-					<option value="specialty-of-the-house">Specialty Of the House</option>
-					<option value="lunch-others">Lunch &amp; Others</option>
-					<option value="spaghetti-pancit-sa-bilao">Spaghetti &amp; Pancit Sa Bilao</option>
-					<option value="desserts-and-sweets">Desserts And Sweets</option>
-					<option value="cakes-bread">Cakes &amp; Bread</option>
-					<option value="coolers">Coolers</option>
-					<option value="softdrinks">Softdrinks</option>
-				</select>
+				<div class="menu-category-picker" id="menu-category-picker">
+					<button class="menu-category-select" id="menu-category-select" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="menu-category-options">
+						<span class="menu-category-selected">All Menu Items</span>
+						<span class="menu-category-icon" aria-hidden="true">
+							<span></span><span></span><span></span>
+						</span>
+					</button>
+					<div class="menu-category-options" id="menu-category-options" role="listbox" aria-label="Menu categories" aria-hidden="true">
+						<div class="menu-category-option" role="option" aria-selected="true" tabindex="-1" data-value="all">All Menu Items</div>
+						<div class="menu-category-option" role="option" aria-selected="false" tabindex="-1" data-value="popular">Popular</div>
+						<div class="menu-category-option" role="option" aria-selected="false" tabindex="-1" data-value="meals">Meals</div>
+						<div class="menu-category-option" role="option" aria-selected="false" tabindex="-1" data-value="noodles-and-soup">Noodles And Soup</div>
+						<div class="menu-category-option" role="option" aria-selected="false" tabindex="-1" data-value="short-order">Short Order</div>
+						<div class="menu-category-option" role="option" aria-selected="false" tabindex="-1" data-value="sandwiches">Sandwiches</div>
+						<div class="menu-category-option" role="option" aria-selected="false" tabindex="-1" data-value="specialty-of-the-house">Specialty Of the House</div>
+						<div class="menu-category-option" role="option" aria-selected="false" tabindex="-1" data-value="lunch-others">Lunch &amp; Others</div>
+						<div class="menu-category-option" role="option" aria-selected="false" tabindex="-1" data-value="spaghetti-pancit-sa-bilao">Spaghetti &amp; Pancit Sa Bilao</div>
+						<div class="menu-category-option" role="option" aria-selected="false" tabindex="-1" data-value="desserts-and-sweets">Desserts And Sweets</div>
+						<div class="menu-category-option" role="option" aria-selected="false" tabindex="-1" data-value="cakes-bread">Cakes &amp; Bread</div>
+						<div class="menu-category-option" role="option" aria-selected="false" tabindex="-1" data-value="coolers">Coolers</div>
+						<div class="menu-category-option" role="option" aria-selected="false" tabindex="-1" data-value="softdrinks">Softdrinks</div>
+					</div>
+				</div>
 			</div>
 				<!-- This is the border of the big menu on the right -->
 			<div class="menu-content">
@@ -65,11 +76,11 @@
 													<tr>
 															<!-- food name -->
 														<td class="menu-item-name-cell">
-															<h4 class="menu-item-name">Baked Macaroni</h4>
+															<h4 class="menu-item-name">Pancit Palabok</h4>
 														</td>
-															<!-- food picture -->
+													
 														<td class="menu-item-image-cell">
-															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+															<img src="https://foodpanda.dhmedia.io/image/fd-ph/products/22689727.jpg?width=577.5&height=577.5" alt="Palabok" class="menu-item-image">
 														</td>
 													</tr>
 												</table>
@@ -81,10 +92,11 @@
 												<table>
 													<tr>
 														<td class="menu-item-name-cell">
-															<h4 class="menu-item-name">Beef Spaghetti</h4>
+															<h4 class="menu-item-name">Lechon Paksiw</h4>
 														</td>
+															<!-- food picture -->
 														<td class="menu-item-image-cell">
-															<img src="https://images.deliveryhero.io/image/fd-ph/products/22689735.jpg?width=393.75&height=393.75" alt="Spaghetti" class="menu-item-image">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu5PvsXVg-jCXd4QtcvaHm8mb2CPnkZHDKhkyh2vo-AQ&s=10" alt="Paksiw" class="menu-item-image">
 														</td>
 													</tr>
 													
@@ -97,10 +109,10 @@
 												<table>
 													<tr>
 														<td class="menu-item-name-cell">
-															<h4 class="menu-item-name">Bilao Beef Spaghetti</h4>
+															<h4 class="menu-item-name">Beef Spaghetti</h4>
 														</td>
 														<td class="menu-item-image-cell">
-															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTtS_NXuE_aHROAWaxGO8BdklNeITCx3R8dr98DLgYGM-UOrhyyD51fXTM&s=10" alt="Paksiw" class="menu-item-image">
+															<img src="https://images.deliveryhero.io/image/fd-ph/products/22689735.jpg?width=393.75&height=393.75" alt="Spaghetti" class="menu-item-image">
 														</td>
 													</tr>
 												</table>
@@ -113,11 +125,11 @@
 											<div class="menu-item-tile">
 												<table>
 													<tr>
-														<td class="menu-item-name-cell">
-															<h4 class="menu-item-name">Pancit Palabok</h4>
+														<td class="menu-item-name-cell">	
+															<h4 class="menu-item-name">Pancit Palabok Bilao 300</h4>
 														</td>
 														<td class="menu-item-image-cell">
-															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFpV_URXGKTuHuvASG0VS7VXkMVEHVAuOyF6y9mlkRfpddE_GbfsKlQVQ5&s=10" alt="Palabok" class="menu-item-image">
+															<img src="https://images.deliveryhero.io/image/fd-ph/Products/22695770.jpg?width=577.5&height=577.5" alt="Pancit Palabok 300" class="menu-item-image">
 														</td>
 													</tr>
 												</table>
@@ -128,10 +140,10 @@
 												<table>
 													<tr>
 														<td class="menu-item-name-cell">
-															<h4 class="menu-item-name">Pancit Palabok Bilao 300</h4>
+															<h4 class="menu-item-name">Pancit Palabok Bilao 600</h4>
 														</td>
 														<td class="menu-item-image-cell">
-															<img src="https://images.deliveryhero.io/image/fd-ph/Products/22695770.jpg?width=577.5&height=577.5" alt="Pancit Palabok 300" class="menu-item-image">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdx7n90-nGEM6GZUWVmX46qJjQHqBSONMIHAeT0hwnHYPUBwBP8kimo7VG&s=10" alt="Pancit Palabok 600" class="menu-item-image">
 														</td>
 													</tr>
 												</table>
@@ -142,10 +154,10 @@
 												<table>
 													<tr>
 														<td class="menu-item-name-cell">
-															<h4 class="menu-item-name">Pancit Palabok Bilao 600</h4>
+															<h4 class="menu-item-name">Bilao Beef Spaghetti</h4>
 														</td>
 														<td class="menu-item-image-cell">
-															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdx7n90-nGEM6GZUWVmX46qJjQHqBSONMIHAeT0hwnHYPUBwBP8kimo7VG&s=10" alt="Pancit Palabok 600" class="menu-item-image">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTtS_NXuE_aHROAWaxGO8BdklNeITCx3R8dr98DLgYGM-UOrhyyD51fXTM&s=10" alt="Paksiw" class="menu-item-image">
 														</td>
 													</tr>
 												</table>
@@ -171,25 +183,77 @@
 									<tr>
 										<td class="menu-cell">
 											<div class="menu-item-tile">
-											
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Beef Mami</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://foodpanda.dhmedia.io/image/fd-ph/products/22695776.jpg?width=150&height=150" alt="Beef Mami" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
 											</div>
 										</td>
 										<td class="menu-cell">
-											<div class="menu-item-tile">Item</div>
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Beef Wonton</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://foodpanda.dhmedia.io/image/fd-ph/products/22689739.jpg?width=150&height=150" alt="Beef Wonton" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
 										</td>
 										<td class="menu-cell">
-											<div class="menu-item-tile">Item</div>
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Wonton Mami</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://foodpanda.dhmedia.io/image/fd-ph/products/22689742.jpg?width=150&height=150" alt="Wonton Mami" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
 										</td>
 									</tr>
 									<tr>
 										<td class="menu-cell menu-cell--bottom-left">
-											<div class="menu-item-tile">Item</div>
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Chicken Mami</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://foodpanda.dhmedia.io/image/fd-ph/products/22689741.jpg?width=150&height=150" alt="Chicken Mami" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
 										</td>
 										<td class="menu-cell">
-											<div class="menu-item-tile">Item</div>
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Chicken Wonton</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://foodpanda.dhmedia.io/image/fd-ph/Products/22689743.jpg?width=150&height=150" alt="Chicken Wonton" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
 										</td>
-										<td class="menu-cell menu-cell--bottom-right">
-											<div class="menu-item-tile">Item</div>
+										<td class="menu-cell menu-cell--bottom-right menu-cell--empty">
 										</td>
 									</tr>
 								</tbody>
@@ -210,24 +274,90 @@
 								<tbody>
 									<tr>
 										<td class="menu-cell">
-											<div class="menu-item-tile">Item</div>
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
 										</td>
 										<td class="menu-cell">
-											<div class="menu-item-tile">Item</div>
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
 										</td>
 										<td class="menu-cell">
-											<div class="menu-item-tile">Item</div>
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
 										</td>
 									</tr>
 									<tr>
 										<td class="menu-cell menu-cell--bottom-left">
-											<div class="menu-item-tile">Item</div>
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
 										</td>
 										<td class="menu-cell">
-											<div class="menu-item-tile">Item</div>
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
 										</td>
 										<td class="menu-cell menu-cell--bottom-right">
-											<div class="menu-item-tile">Item</div>
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
 										</td>
 									</tr>
 								</tbody>
@@ -248,24 +378,90 @@
 								<tbody>
 									<tr>
 										<td class="menu-cell">
-											<div class="menu-placeholder">Item</div>
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
 										</td>
 										<td class="menu-cell">
-											<div class="menu-placeholder">Item</div>
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
 										</td>
 										<td class="menu-cell">
-											<div class="menu-placeholder">Item</div>
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
 										</td>
 									</tr>
 									<tr>
 										<td class="menu-cell menu-cell--bottom-left">
-											<div class="menu-placeholder">Item</div>
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
 										</td>
 										<td class="menu-cell">
-											<div class="menu-placeholder">Item</div>
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
 										</td>
 										<td class="menu-cell menu-cell--bottom-right">
-											<div class="menu-placeholder">Item</div>
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
 										</td>
 									</tr>
 								</tbody>
@@ -285,14 +481,92 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
 									</tr>
 									<tr>
-										<td class="menu-cell menu-cell--bottom-left"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell menu-cell--bottom-right"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell menu-cell--bottom-left">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell menu-cell--bottom-right">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
 									</tr>
 								</tbody>
 							</table>
@@ -311,14 +585,92 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
 									</tr>
 									<tr>
-										<td class="menu-cell menu-cell--bottom-left"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell menu-cell--bottom-right"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell menu-cell--bottom-left">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell menu-cell--bottom-right">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
 									</tr>
 								</tbody>
 							</table>
@@ -337,14 +689,92 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
 									</tr>
 									<tr>
-										<td class="menu-cell menu-cell--bottom-left"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell menu-cell--bottom-right"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell menu-cell--bottom-left">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell menu-cell--bottom-right">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
 									</tr>
 								</tbody>
 							</table>
@@ -363,14 +793,92 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
 									</tr>
 									<tr>
-										<td class="menu-cell menu-cell--bottom-left"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell menu-cell--bottom-right"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell menu-cell--bottom-left">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell menu-cell--bottom-right">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
 									</tr>
 								</tbody>
 							</table>
@@ -389,14 +897,92 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
 									</tr>
 									<tr>
-										<td class="menu-cell menu-cell--bottom-left"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell menu-cell--bottom-right"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell menu-cell--bottom-left">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell menu-cell--bottom-right">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
 									</tr>
 								</tbody>
 							</table>
@@ -415,14 +1001,92 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
 									</tr>
 									<tr>
-										<td class="menu-cell menu-cell--bottom-left"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell menu-cell--bottom-right"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell menu-cell--bottom-left">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell menu-cell--bottom-right">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
 									</tr>
 								</tbody>
 							</table>
@@ -441,14 +1105,92 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
 									</tr>
 									<tr>
-										<td class="menu-cell menu-cell--bottom-left"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell"><div class="menu-placeholder">Item</div></td>
-										<td class="menu-cell menu-cell--bottom-right"><div class="menu-placeholder">Item</div></td>
+										<td class="menu-cell menu-cell--bottom-left">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td class="menu-cell menu-cell--bottom-right">
+											<div class="menu-item-tile">
+												<table>
+													<tr>
+														<td class="menu-item-name-cell">
+															<h4 class="menu-item-name">Baked Macaroni</h4>
+														</td>
+														<td class="menu-item-image-cell">
+															<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3ei5bh5G_a8X6jz0AYBHZGblJFVyE1bYLHBtgpqmeA&s=10" alt="Macaroni" class="menu-item-image">
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
 									</tr>
 								</tbody>
 							</table>
@@ -459,4 +1201,5 @@
 		</div>
 		<script src="menu-filter.js"></script>
 	</body>
+	<footer>Joey's Restaurant Café &middot; 39 General Luna Street, Cabanatuan City, 3100 Nueva Ecija</footer>
 </html>
