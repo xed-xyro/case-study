@@ -82,7 +82,7 @@ nav a[aria-current="page"] {
 .search-bar input[type="search"]:focus {
   background: #d32f2f;
   border-color: white;
-  box-shadow: 0 0 5px rgba(229, 70, 70, 0.55);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.55);
   color: white;
   transition-timing-function: ease-in;
 }
@@ -108,6 +108,37 @@ nav a[aria-current="page"] {
 .order-btn {
   font-size: 18px;
   font-weight: bold;
+}
+
+.brand-logo {
+  width: min(620px, calc(100% - 32px));
+  margin: 0 auto 40px;
+}
+
+.brand-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 32px;
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto 40px;
+}
+
+.contact-layout > .brand-logo,
+.contact-layout > .container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.contact-layout > .brand-logo {
+  transform: translateY(-50px);
 }
 
 .container {
@@ -145,7 +176,7 @@ nav a[aria-current="page"] {
 .container h3 {
   margin: 0;
   font-size: 18px;
-  color: #333;
+  color: #5A3E2B;
 }
 
 .container a {
@@ -206,7 +237,7 @@ nav a[aria-current="page"] {
   border: 2px solid #d32f2f;
   border-radius: 0 0 10px 10px;
   background: white;
-  color: #333;
+  color: #5A3E2B;
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
@@ -226,7 +257,7 @@ nav a[aria-current="page"] {
   height: 3px;
   border-radius: 50%;
   background: currentColor;
-  transition: left 0.25s ease, top 0.25s ease;
+  transition: left 0.2s ease, top 0.2s ease;
 }
 
 /* The dots are horizontal when the menu category picker is closed. */
@@ -255,7 +286,7 @@ nav a[aria-current="page"] {
 
 /* The dots move into a vertical stack when the menu category picker is open. */
 .menu-category-picker.is-open .menu-category-icon span:nth-child(1) {
-  top: 0;
+  top: 1px;
   left: 5.5px;
 }
 
@@ -324,10 +355,6 @@ nav a[aria-current="page"] {
   border-radius: 20px;
 }
 
-.menu-category--last {
-  margin-bottom: 0;
-}
-
 .menu-category-frame {
   border: 2px solid #d32f2f;
   box-shadow: 0 4px 12px rgba(244, 45, 14, 0.5);
@@ -341,18 +368,16 @@ nav a[aria-current="page"] {
   width: 100%;
   padding: 1px;
   font-size: 18px;
-  color: #333;
+  color: #5A3E2B;
   border-radius: 15px;
   border: 2px solid #d32f2f;
   background: white linear-gradient(rgba(211, 47, 47), rgb(255, 255, 255));
 }
 
-.menu-category-header {
-  color: white;
-}
-
 .menu-category-heading {
+  font-size: 20px;
   padding: 12px;
+  color: white;
   border: 1px solid transparent;
   background: #d32f2f;
   box-shadow: 0px 0px 2px #d32f2fd0;
@@ -377,17 +402,15 @@ nav a[aria-current="page"] {
   box-shadow: none;
 }
 
-.menu-cell--bottom-left,
-.menu-category-table > tbody > tr:last-child > td:first-child {
+.menu-cell--bottom-left {
   border-bottom-left-radius: 12px;
 }
 
-.menu-cell--bottom-right,
-.menu-category-table > tbody > tr:last-child > td:last-child {
+.menu-cell--bottom-right {
   border-bottom-right-radius: 12px;
 }
 
-.menu-cell--bottom {
+.menu-cell--last {
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
 }
@@ -442,16 +465,6 @@ nav a[aria-current="page"] {
 .menu-item-tile {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.menu-placeholder {
-  width: 100%;
-  height: 100%;
-  background: #bab9b7;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -631,6 +644,22 @@ footer {
     padding: 14px;
   }
 
+  .brand-logo {
+    width: calc(100% - 24px);
+    margin: 0 auto 24px;
+  }
+
+  .contact-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    width: calc(100% - 20px);
+  }
+
+  .contact-layout > .brand-logo {
+    width: calc(100% - 24px);
+    margin: 0 auto;
+  }
+
   .form-row {
     flex-wrap: wrap;
     gap: 10px;
@@ -735,4 +764,115 @@ footer {
     padding: 14px 10px;
     font-size: 13px;
   }
+}
+
+/* following is new design for menu */
+.menu-list-section .menu-category-frame {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 2px solid #d32f2f;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(244, 45, 14, 0.5);
+}
+
+.menu-list-section .menu-category-table {
+  display: block;
+  width: 100%;
+  padding: 1px;
+  border: 2px solid #d32f2f;
+  border-radius: 15px;
+  background: white linear-gradient(rgba(211, 47, 47), rgb(255, 255, 255));
+  font-size: 18px;
+}
+
+.menu-list-section .menu-category-table > thead,
+.menu-list-section .menu-category-table > tbody {
+  display: block;
+}
+
+.menu-list-section .menu-category-table > thead > tr,
+.menu-list-section .menu-category-table > thead > tr > th,
+.menu-list-section .menu-category-table > tbody > tr,
+.menu-list-section .menu-category-table > tbody > tr > td {
+  display: block;
+  width: 100%;
+}
+
+.menu-list-section .menu-category-table > thead > tr > th {
+  padding: 11px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: #d32f2f;
+  box-shadow: 0 2px 5px rgba(211, 47, 47, 0.2);
+  color: white;
+  text-align: center;
+}
+
+.menu-list-section .menu-category-table > tbody > tr > td {
+  min-width: 0;
+  padding: 6px;
+  border: 1px solid transparent;
+  background: #fff;
+  box-shadow: 0 0 2px #d32f2fd0;
+}
+
+.menu-list-section .menu-category-table > tbody > tr > td.menu-cell--empty {
+  display: none;
+}
+
+.menu-list-section .menu-item-tile {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  justify-content: initial;
+  gap: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.menu-list-section .menu-item-name-cell {
+  display: block;
+  order: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.menu-list-section .menu-item-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+}
+
+.menu-list-section .menu-item-name-leader {
+  flex: 1 1 auto;
+  min-width: 12px;
+  border-bottom: 2px dotted #c9aaa0;
+}
+
+.menu-list-section .menu-item-details {
+  grid-column: 1 / -1;
+  order: 1;
+  display: block;
+  padding: 12px;
+  background: #fff;
+}
+
+.menu-list-section .menu-item-details-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.menu-list-section .menu-item-details .menu-item-image {
+  flex: 0 0 120px;
+  width: 120px;
+  max-width: 120px;
+  margin: 0;
+}
+
+.menu-list-section .menu-item-description {
+  margin: 0;
+  line-height: 1.45;
 }
