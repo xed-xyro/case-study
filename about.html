@@ -8,6 +8,9 @@
 	</head>
 	<body>
 		<div class="nav-box">
+			<a href="index.html" class="logo" aria-label="Joey's Restaurant Cafe home">
+				<img src="images/joeys-logo.png" alt="Joey's Restaurant Cafe Logo" class="logo-image">
+			</a>
 			<nav>
 				<a href="index.html">Home</a>
 				<a href="menu.html">Menu</a>
@@ -17,16 +20,25 @@
 					<input type="search" placeholder="Search">
 					<span class="search-icon" aria-hidden="true">🔍</span>
 				</form>
-				<a href="https://www.foodpanda.ph/restaurant/b6ho/joeys-restaurant-cafe-general-luna-street" target="_blank" rel="noopener noreferrer" class="order-btn">Order Now!</a>
+				<a href="https://www.foodpanda.ph/restaurant/b6ho/joeys-restaurant-cafe-general-luna-street" target="_blank" rel="noopener noreferrer" class="order-btn">Order Here!</a>
 			</nav>
 		</div>
-        <h1>Joey's <br> Restaurant Café</h1>
-        <div class="container">
+        <main class="about-story-layout">
+            <div class="story">
+                <h2>The Story</h2>
+                <p>Joeys Restaurant 43 Years in the making since November 2, 1982 in Cabanatuan City. Special Pancit Palabok well known to Novo Ecijano and serves a variety of delicious Filipino cuisines.</p>
+            </div>
+            <button class="add-review-toggle" id="toggleFormBtn" type="button" aria-expanded="false" aria-controls="addForm">+ Write a review</button>
+            <div class="story-image">
+                <img src="https://scontent.fmnl33-3.fna.fbcdn.net/v/t39.30808-6/494106500_9575114825870949_8750869133254645764_n.jpg?stp=dst-jpg_tt6&cstp=mx720x404&ctp=s720x404&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=cf85f3&_nc_eui2=AeFe-Z3L6ebbP9dM7c3Y_3-ET4fzRNUmU35Ph_NE1SZTfoBC2RufCbFiaoj4VcXTpKTrIDevhxrc7XZAbzochjw5&_nc_ohc=9QPdn2puMokQ7kNvwFGGzhA&_nc_oc=AdoOCfAsWae2QEDQxwoFPMaZVXUCP45aVymOCO2saJXbxXU4wXQgrhuonFtnyspfVB4&_nc_zt=23&_nc_ht=scontent.fmnl33-3.fna&_nc_gid=Sq1r870rftLPKLVD_5d-Zg&_nc_ss=7b2a8&oh=00_AQTdv1SEn9Im5SBZ2u2mXth_nr2mqZtza2zZWhy0UBdWOw&oe=6AF4F7F1" alt="Joey's Restaurant Café Interior">
+            </div>
+        </main>
+
+        <div class="review-container">
             <div class="summary" id="summary"></div>
             <div class="controls">
                 <div class="filters" id="filters"></div>
-                <button class="add-review-toggle" id="toggleFormBtn" type="button" aria-expanded="false" aria-controls="addForm">+ Write a review</button>
-            </div>
+        </div>
 
         <form id="reviewForm">
             <div class="add-review-form" id="addForm">
