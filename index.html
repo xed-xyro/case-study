@@ -8,6 +8,9 @@
 	</head>
 	<body>
 		<div class="nav-box">
+			<a href="index.html" class="logo" aria-label="Joey's Restaurant Cafe home">
+				<img src="images/joeys-logo.png" alt="Joey's Restaurant Cafe Logo" class="logo-image">
+			</a>
 			<nav>
 				<a href="index.html" aria-current="page">Home</a>
 				<a href="menu.html">Menu</a>
@@ -17,12 +20,54 @@
 					<input type="search" placeholder="Search" name="search" class="search-input">
 					<span class="search-icon" aria-hidden="true">🔍</span>
 				</form>
-				<a href="https://www.foodpanda.ph/restaurant/b6ho/joeys-restaurant-cafe-general-luna-street" target="_blank" class="order-btn" onclick="return confirm('You are about to be redirected to Foodpanda. Do you want to continue?');">Order Now!</a>
+				<a href="https://www.foodpanda.ph/restaurant/b6ho/joeys-restaurant-cafe-general-luna-street" target="_blank" class="order-btn" onclick="return confirm('You are about to be redirected to Foodpanda. Do you want to continue?');">Order Here!</a>
 			</nav>
 		</div>
-		<main class="brand-logo">
-			<img src="images/Joeys-logo.png" alt="Joey's Restaurant Cafe logo">
+		<main class="home-content-layout">
+			<div class="container welcome-container">
+				<h1 class="title">Taste The Comfort</h1>
+				<h1 class="second-title">Of Home</h1>
+			</div>
+			<aside class="menu-controls home-menu-controls" aria-labelledby="home-menu-title">
+				<div class="home-menu-links" role="navigation" aria-label="Menu sections">
+					<a href="menu.html#popular">🍽 Popular Meals</a>
+					<a href="menu.html#specialty-of-the-house">🌟 Specialties</a>
+					<a href="menu.html#desserts-and-sweets">🍰 Desserts</a>
+					<a href="menu.html#coolers">🥤 Drinks</a>
+				</div>
+			</aside>
+			<div class="home-content-strip" aria-label="What makes Joey's special">
+				<section class="home-feature">
+					<span class="home-feature-icon" aria-hidden="true">🌿</span>
+					<div>
+						<h2>Fresh Ingredients</h2>
+						<p>We only use the freshest ingredients for the best quality meals</p>
+					</div>
+				</section>
+				<section class="home-feature">
+					<span class="home-feature-icon" aria-hidden="true">☕</span>
+					<div>
+						<h2>Cozy Atmosphere</h2>
+						<p>A warm and relaxing place perfect for any occasion</p>
+					</div>
+				</section>
+				<section class="home-feature">
+					<span class="home-feature-icon" aria-hidden="true">🏠</span>
+					<div>
+						<h2>Family Friendly</h2>
+						<p>A place where families and friends enjoy great food together</p>
+					</div>
+				</section>
+				<section class="home-feature">
+					<span class="home-feature-icon" aria-hidden="true">🍽️</span>
+					<div>
+						<h2>Affordable Meals</h2>
+						<p>Delicious food that fits your budget without compromising quality</p>
+					</div>
+				</section>
+			</div>
 		</main>
+		
 		<footer>Joey's Restaurant Café &middot; 39 General Luna Street, Cabanatuan City, 3100 Nueva Ecija</footer>
 	</body>
 </html>
