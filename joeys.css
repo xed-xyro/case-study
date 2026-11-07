@@ -154,7 +154,55 @@ nav a[aria-current="page"]:not(.logo) {
   top: 50%;
   right: 14px;
   transform: translateY(-50%);
-  pointer-events: none;
+  padding: 2px;
+  border: 0;
+  background: none;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.search-icon:focus-visible {
+  outline: 2px solid #d32f2f;
+  outline-offset: 2px;
+  border-radius: 50%;
+}
+
+.menu-search-status {
+  margin: 0;
+  padding: 12px 16px;
+  border: 2px solid #d32f2f;
+  border-radius: 14px;
+  background: white;
+  color: #5A3E2B;
+  font-weight: bold;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-search-clear {
+  margin-left: auto;
+  padding: 4px 14px;
+  border: 2px solid #d32f2f;
+  border-radius: 30px;
+  background: white;
+  color: #d32f2f;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu-search-clear:hover,
+.menu-search-clear:focus-visible {
+  background: #d32f2f;
+  color: white;
+}
+
+.menu-cell.is-search-hidden,
+.menu-list-section .menu-category-table > tbody > tr > td.is-search-hidden,
+.menu-cell--empty.is-search-hidden {
+  display: none;
 }
 
 .search-bar input::placeholder {
@@ -1269,4 +1317,7 @@ footer {
 .menu-list-section .menu-item-description {
   margin: 0;
   line-height: 1.45;
+}
+.menu-search-status[hidden] {
+  display: none;
 }
