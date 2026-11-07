@@ -1,6 +1,64 @@
 const categoryPicker = document.getElementById("menu-category-picker");
 const menuContent = document.querySelector(".menu-content");
 
+// Shared filter state used by both the category picker and the search bar.
+let activeCategory = "all";
+let searchTerms = [];
+let menuSearchStatus = null;
+let menuSearchCount = null;
+
+// Lowercases text and strips accents so "pancit" matches "Páncit".
+function normalizeSearchText(text) {
+  return String(text || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+// Shows the menu sections and items that match the selected category and search terms.
+function applyMenuFilters() {
+  if (!menuContent) {
+    return;
+  }
+
+  const isSearching = searchTerms.length > 0;
+  let matchCount = 0;
+
+  menuContent.querySelectorAll(":scope > section").forEach((section) => {
+    const inCategory = activeCategory === "all" || section.id === activeCategory;
+    let sectionMatches = 0;
+
+    section.querySelectorAll(".menu-cell").forEach((cell) => {
+      const tile = cell.querySelector(".menu-item-tile");
+      const haystack = tile ? tile.dataset.searchText || "" : "";
+      const matches = !isSearching || (tile !== null && searchTerms.every((term) => haystack.includes(term)));
+
+      cell.classList.toggle("is-search-hidden", isSearching && !matches);
+      if (tile && matches) {
+        sectionMatches += 1;
+      }
+    });
+
+    const isVisible = inCategory && (!isSearching || sectionMatches > 0);
+    section.hidden = !isVisible;
+    if (isVisible) {
+      matchCount += sectionMatches;
+    }
+  });
+
+  if (menuSearchStatus && menuSearchCount) {
+    menuSearchStatus.hidden = !isSearching;
+    if (isSearching) {
+      const query = searchTerms.join(" ");
+      menuSearchCount.textContent = matchCount > 0
+        ? `${matchCount} ${matchCount === 1 ? "dish matches" : "dishes match"} “${query}”`
+        : `No dishes match “${query}”. Try another word or browse a category.`;
+    }
+  }
+}
+
 // Sets up category filtering only when both parts of the menu are present.
 if (categoryPicker && menuContent) {
   const categoryButton = categoryPicker.querySelector(".menu-category-select");
@@ -30,9 +88,8 @@ if (categoryPicker && menuContent) {
       options.forEach((item) => {
         item.setAttribute("aria-selected", String(item === option));
       });
-      menuSections.forEach((section) => {
-        section.hidden = selectedCategory !== "all" && section.id !== selectedCategory;
-      });
+      activeCategory = selectedCategory;
+      applyMenuFilters();
 
       setOptionsOpen(false);
       categoryButton.focus();
@@ -166,5 +223,92 @@ if (menuContent) {
       details.append(detailsContent);
       tile.replaceChildren(nameCell, details);
     });
+  });
+}
+
+// Makes the navigation search bar filter the menu as the visitor types.
+if (menuContent) {
+  const searchForm = document.querySelector(".search-bar");
+  const searchInput = searchForm ? searchForm.querySelector('input[type="search"]') : null;
+
+  // Stores each tile's searchable text (name plus description, if any).
+  menuContent.querySelectorAll(".menu-item-tile").forEach((tile) => {
+    const name = tile.querySelector(".menu-item-name")?.textContent || "";
+    const description = tile.querySelector(".menu-item-description")?.textContent || "";
+    const imageAlt = tile.querySelector(".menu-item-image")?.getAttribute("alt") || "";
+    tile.dataset.searchText = normalizeSearchText(`${name} ${description} ${imageAlt}`);
+  });
+
+  // Adds a results message with a button to clear the search.
+  menuSearchStatus = document.createElement("div");
+  menuSearchStatus.className = "menu-search-status";
+  menuSearchStatus.setAttribute("role", "status");
+  menuSearchStatus.hidden = true;
+  menuSearchCount = document.createElement("span");
+  const clearButton = document.createElement("button");
+  clearButton.type = "button";
+  clearButton.className = "menu-search-clear";
+  clearButton.textContent = "Clear search";
+  menuSearchStatus.append(menuSearchCount, clearButton);
+  menuContent.prepend(menuSearchStatus);
+
+  // Resets the category picker to "All Menu Items" so search covers the whole menu.
+  function resetCategoryToAll() {
+    if (activeCategory === "all" || !categoryPicker) {
+      return;
+    }
+    activeCategory = "all";
+    const selectedLabel = categoryPicker.querySelector(".menu-category-selected");
+    categoryPicker.querySelectorAll(".menu-category-option").forEach((option) => {
+      const isAll = option.dataset.value === "all";
+      option.setAttribute("aria-selected", String(isAll));
+      if (isAll && selectedLabel) {
+        selectedLabel.textContent = option.textContent;
+      }
+    });
+  }
+
+  // Applies a search query and keeps it in the page URL so results can be shared.
+  function runSearch(rawQuery) {
+    const query = normalizeSearchText(rawQuery);
+    searchTerms = query ? query.split(" ") : [];
+    if (searchTerms.length > 0) {
+      resetCategoryToAll();
+    }
+    applyMenuFilters();
+
+    const url = new URL(window.location.href);
+    if (query) {
+      url.searchParams.set("q", rawQuery.trim());
+    } else {
+      url.searchParams.delete("q");
+    }
+    window.history.replaceState(null, "", url);
+  }
+
+  const initialQuery = new URLSearchParams(window.location.search).get("q") || "";
+  if (searchInput) {
+    searchInput.value = initialQuery;
+    searchInput.addEventListener("input", () => runSearch(searchInput.value));
+  }
+  if (initialQuery.trim()) {
+    runSearch(initialQuery);
+  }
+
+  // Filters in place on the menu page instead of reloading it.
+  if (searchForm) {
+    searchForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      runSearch(searchInput ? searchInput.value : "");
+      menuContent.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
+  clearButton.addEventListener("click", () => {
+    if (searchInput) {
+      searchInput.value = "";
+      searchInput.focus();
+    }
+    runSearch("");
   });
 }
