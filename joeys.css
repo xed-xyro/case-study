@@ -897,7 +897,7 @@ h1 {
 
 /* Messages */
 #thankYouMsg {
-  color: green;
+  color: #fffa61;
   font-weight: bold;
   font-size: 1.1rem;
   margin-top: 15px;
@@ -1182,12 +1182,11 @@ footer {
     padding: 6px;
   }
 
-  /* Target only the outer menu table's last row. rule for mobile view */
-  .menu-category-table > tbody > tr:last-child > td:first-child {
+  .menu-category-frame--popular .menu-category-table > tbody > tr:last-child > td:first-child {
     border-bottom-left-radius: 0;
   }
 
-  .menu-category-table > tbody > tr:last-child > td:nth-child(2) {
+  .menu-category-frame--popular .menu-category-table > tbody > tr:last-child > td:nth-child(2) {
     border-bottom-left-radius: 12px;
   }
 
