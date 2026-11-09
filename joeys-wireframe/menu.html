@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Joey's Restaurant Café | Menu Wireframe</title><link rel="stylesheet" href="wireframe.css"></head>
+<body>
+  <header class="site-header">
+    <a class="logo-placeholder" href="index.html" aria-label="Joey's Restaurant Café home">JOEY'S LOGO</a><button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="menu.html" aria-current="page">Menu</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+      <form class="search-form" action="menu.html" method="get" role="search"><input id="menuSearch" type="search" name="q" placeholder="Search" aria-label="Search the menu"><button type="submit" aria-label="Search">⌕</button></form><a class="order-link" href="https://www.foodpanda.ph/restaurant/b6ho/joeys-restaurant-cafe-general-luna-street" target="_blank" rel="noopener">Order Here!</a>
+    </nav>
+  </header>
+  <main class="menu-layout">
+    <aside class="menu-sidebar">
+      <h1>View Menu</h1>
+      <div class="category-picker" id="categoryPicker">
+        <button id="categoryToggle" class="category-select" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="categoryOptions"><span id="selectedCategory">All Menu Items</span><span aria-hidden="true">☷</span></button>
+        <div class="category-options" id="categoryOptions" role="listbox" aria-label="Menu categories" hidden>
+          <button type="button" role="option" aria-selected="true" data-category="all">All Menu Items</button>
+          <button type="button" role="option" aria-selected="false" data-category="popular">Popular</button>
+          <button type="button" role="option" aria-selected="false" data-category="noodles-and-soup">Noodles And Soup</button>
+          <button type="button" role="option" aria-selected="false" data-category="short-order">Short Order</button>
+          <button type="button" role="option" aria-selected="false" data-category="sandwiches">Sandwiches</button>
+          <button type="button" role="option" aria-selected="false" data-category="specialty-of-the-house">Specialty Of the House</button>
+          <button type="button" role="option" aria-selected="false" data-category="lunch-others">Lunch &amp; Others</button>
+          <button type="button" role="option" aria-selected="false" data-category="spaghetti-pancit-sa-bilao">Spaghetti &amp; Pancit Sa Bilao</button>
+          <button type="button" role="option" aria-selected="false" data-category="desserts-and-sweets">Desserts And Sweets</button>
+          <button type="button" role="option" aria-selected="false" data-category="cakes-bread">Cakes &amp; Bread</button>
+          <button type="button" role="option" aria-selected="false" data-category="coolers">Coolers</button>
+          <button type="button" role="option" aria-selected="false" data-category="softdrinks">Softdrinks</button>
+        </div>
+      </div>
+      <p class="sidebar-note">Category selector opens a list of 12 menu groups.</p>
+    </aside>
+    <section class="menu-content" id="menuContent" aria-label="Menu items">
+      <div class="menu-status" id="menuStatus" hidden><span id="resultCount"></span><button type="button" id="clearSearch">Clear search</button></div>
+      <section class="menu-section" id="popular" data-category="popular"><h2>Popular</h2><div class="item-grid">
+        <article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Pancit Palabok</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Lechon Paksiw</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Beef Spaghetti</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Pancit Palabok Bilao 300</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Pancit Palabok Bilao 600</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Bilao Beef Spaghetti</h3></article>
+      </div></section>
+      <section class="menu-section" id="noodles-and-soup" data-category="noodles-and-soup"><h2>Noodles And Soup</h2><div class="item-grid">
+        <article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Beef Mami</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Beef Wonton</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Wonton Mami</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Chicken Mami</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Chicken Wonton</h3></article>
+      </div></section>
+      <section class="menu-section" id="short-order" data-category="short-order"><h2>Short Order</h2><div class="item-grid">
+        <article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Spaghetti</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Beef Spaghetti</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Baked Macaroni</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Pancit Bihon</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Lumpia</h3></article>
+      </div></section>
+      <section class="menu-section" id="sandwiches" data-category="sandwiches"><h2>Sandwiches</h2><div class="item-grid">
+        <article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Chicken Sandwich</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Ham &amp; Egg</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Club House</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Hamburger</h3></article>
+      </div></section>
+      <section class="menu-section" id="specialty-of-the-house" data-category="specialty-of-the-house"><h2>Specialty Of the House</h2><div class="item-grid">
+        <article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Pancit Palabok</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Bilao Pancit Palabok 300</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Bilao Pancit Palabok 400</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Bilao Pancit Palabok 500</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Bilao Pancit Palabok 600</h3></article>
+      </div></section>
+      <section class="menu-section" id="lunch-others" data-category="lunch-others"><h2>Lunch &amp; Others</h2><div class="item-grid">
+        <article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Barbeque</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Kare-Kare</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Chicken BBQ</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Lechon Paksiw</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Plain Rice Platter (Small)</h3></article>
+      </div></section>
+      <section class="menu-section" id="spaghetti-pancit-sa-bilao" data-category="spaghetti-pancit-sa-bilao"><h2>Spaghetti &amp; Pancit Sa Bilao</h2><div class="item-grid">
+        <article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Bilao Pork Spaghetti</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Bilao Sotanghon Guisado</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Bilao Bihon Guisado</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Bilao Beef Spaghetti</h3></article>
+      </div></section>
+      <section class="menu-section" id="desserts-and-sweets" data-category="desserts-and-sweets"><h2>Desserts And Sweets</h2><div class="item-grid">
+        <article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Leche Flan Llanera</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Broken Glass Gelatin</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Leche Flan</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Macaroni Salad</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Fruit Salad</h3></article>
+      </div></section>
+      <section class="menu-section" id="cakes-bread" data-category="cakes-bread"><h2>Cakes &amp; Bread</h2><div class="item-grid">
+        <article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Garlic Bread</h3></article>
+      </div></section>
+      <section class="menu-section" id="coolers" data-category="coolers"><h2>Coolers</h2><div class="item-grid">
+        <article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Buko Juice</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Gulaman</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Nestea</h3></article>
+      </div></section>
+      <section class="menu-section" id="softdrinks" data-category="softdrinks"><h2>Softdrinks</h2><div class="item-grid">
+        <article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Coke Regular</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Coke In Can</h3></article><article class="menu-item"><div class="image-placeholder">FOOD IMAGE</div><h3>Coke Zero In Can</h3></article>
+      </div></section>
+      <p id="noResults" class="empty-state" hidden>No menu items match this search.</p>
+    </section>
+  </main>
+  <footer>Joey's Restaurant Café · 39 General Luna Street, Cabanatuan City, 3100 Nueva Ecija</footer><script src="wireframe.js"></script>
+</body></html>

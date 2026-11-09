@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Joey's Restaurant Café | About Wireframe</title><link rel="stylesheet" href="wireframe.css"></head>
+<body>
+  <header class="site-header"><a class="logo-placeholder" href="index.html" aria-label="Joey's Restaurant Café home">JOEY'S LOGO</a><button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="about.html" aria-current="page">About</a><a href="contact.html">Contact</a><form class="search-form" action="menu.html" method="get" role="search"><input type="search" name="q" placeholder="Search" aria-label="Search the menu"><button type="submit" aria-label="Search">⌕</button></form><a class="order-link" href="https://www.foodpanda.ph/restaurant/b6ho/joeys-restaurant-cafe-general-luna-street" target="_blank" rel="noopener">Order Here!</a></nav>
+  </header>
+  <main class="about-main">
+    <section class="story-layout"><div class="story-copy"><p class="eyebrow">ABOUT THE RESTAURANT</p><h1>The Story</h1><p>Joeys Restaurant 43 Years in the making since November 2, 1982 in Cabanatuan City. Special Pancit Palabok well known to Novo Ecijano and serves a variety of delicious Filipino cuisines.</p><button class="primary-button" id="openReview" type="button" aria-expanded="false">+ Write a review</button></div><div class="story-image image-placeholder">JOEY'S RESTAURANT CAFÉ INTERIOR PHOTO</div></section>
+    <section class="reviews-area"><div class="review-summary"><h2>Customer Reviews</h2><div class="summary-placeholder">REVIEW SUMMARY / FILTER CONTROLS</div></div><div id="reviewList" class="review-list"><p class="empty-state" id="emptyReviews">No reviews match this filter yet.</p></div></section>
+  </main>
+  <div class="modal-backdrop" id="reviewModal" hidden>
+    <section class="review-modal" role="dialog" aria-modal="true" aria-labelledby="reviewTitle"><button class="modal-close" id="closeReview" aria-label="Close review form">×</button><h2 id="reviewTitle">Share your experience</h2>
+      <form id="reviewForm"><div class="form-row"><label>Your name<input type="text" id="reviewName" placeholder="Enter your name" required></label><label>Dish you tried (optional)<input type="text" id="reviewDish" placeholder="Example: Pancit Palabok"></label></div>
+        <fieldset class="rating-field"><legend>Rating:</legend><div class="star-picker" role="radiogroup" aria-label="Choose a rating"><button type="button" data-rating="1" aria-label="1 star">★</button><button type="button" data-rating="2" aria-label="2 stars">★</button><button type="button" data-rating="3" aria-label="3 stars">★</button><button type="button" data-rating="4" aria-label="4 stars">★</button><button type="button" data-rating="5" aria-label="5 stars">★</button></div></fieldset>
+        <label>Your review<textarea id="reviewText" placeholder="What did you think of the food, service, and atmosphere?" required></textarea></label><button type="submit" class="primary-button">Post review</button></form>
+    </section>
+  </div>
+  <footer>Joey's Restaurant Café · 39 General Luna Street, Cabanatuan City, 3100 Nueva Ecija</footer><script src="wireframe.js"></script>
+</body></html>
